@@ -1,0 +1,20 @@
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin boxSizing {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin primaryColor {
+    background-color: #fafafa;
+}
+
+@mixin btnOutline {
+    outline: none;
+    cursor : pointer;
+}
