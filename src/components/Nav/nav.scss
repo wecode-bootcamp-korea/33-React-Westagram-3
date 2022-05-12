@@ -1,0 +1,68 @@
+/* Nav */
+
+.mainNav {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #cecece;
+
+  .logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1015px;
+    padding: 20px 60px;
+
+    .logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: auto;
+        margin-right: 12px;
+      }
+
+      span {
+        padding: 0 12px;
+        border-left: 2px solid #140a00;
+        font-size: 30px;
+        font-family: 'Lobster', cursive;
+      }
+    }
+
+    .searchInput input {
+      width: 200px;
+      padding: 5px;
+      background-repeat: no-repeat;
+      background-color: #fafafa;
+      border: 1px solid #cecece;
+      border-radius: 2px;
+
+      &::-webkit-input-placeholder {
+        background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+        background-size: contain;
+        background-position: 1px center;
+        background-repeat: no-repeat;
+        text-align: center;
+        text-indent: 0;
+      }
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: auto;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
