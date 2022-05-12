@@ -12,4 +12,11 @@
 
 ---
 
+Coding Convention
+
+1. font-size, border-line은 px로 한다.
+2. 변수 이름은 모두 camelCase를 따른다.
+
+---
+
 아자아자 화이자!
