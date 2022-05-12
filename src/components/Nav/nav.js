@@ -1,4 +1,4 @@
-import './Nav.scss';
+import './nav.scss';
 import React from 'react';
 
 const Nav = () => {
