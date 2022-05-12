@@ -5,46 +5,6 @@ import Nav from '../../../components/Nav/nav';
 function Main() {
   return (
     <Fragment>
-      {/* <nav class="main_nav">
-        <a href="#" className="westagram_icon">
-          <img
-            src="/images/seongju/main-img/westagram_icon.png"
-            width="35"
-            height="35"
-            alt="위스타그램 아이콘"
-          />
-        </a>
-        <span className="westagram_logo">Westagram</span>
-        <form>
-          <input className="searchBar" placeholder="&#128270;검색" />
-        </form>
-        <div className="nav_icon">
-          <a href="#" id="search_icon">
-            <img
-              src="/images/seongju/main-img/1.png"
-              width="35"
-              height="35"
-              alt="검색 아이콘"
-            />
-          </a>
-          <a href="#" id="heart_icon">
-            <img
-              src="/images/seongju/main-img/2.png"
-              width="35"
-              height="35"
-              alt="하트 아이콘"
-            />
-          </a>
-          <a href="#" id="mypage_icno">
-            <img
-              src="/images/seongju/main-img/3.png"
-              width="35"
-              height="35"
-              alt="마이페이지 아이콘"
-            />
-          </a>
-        </div>
-      </nav> */}
       <Nav />
       <main>
         <div className="feeds">
