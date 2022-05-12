@@ -46,10 +46,26 @@ function Main() {
             alt="contentsImg"
           />
           <div className="contentsBottom">
-            <i className="bottomIcons fa-solid fa-heart" />
-            <i className="bottomIcons fa-regular fa-comment" />
-            <i className="bottomIcons fa-solid fa-share-from-square" />
-            <i className="bottomIcons fa-regular fa-bookmark" />
+            <img
+              className="bottomIcons icon1"
+              src="/images/chulhye/main-img/heart.png"
+              alt="contentsImg"
+            />
+            <img
+              className="bottomIcons icon2"
+              src="/images/chulhye/main-img/comment.png"
+              alt="contentsImg"
+            />
+            <img
+              className="bottomIcons icon3"
+              src="/images/chulhye/main-img/share.png"
+              alt="contentsImg"
+            />
+            <img
+              className="bottomIcons icon4"
+              src="/images/chulhye/main-img/shave.png"
+              alt="contentsImg"
+            />
           </div>
           <div className="uploadedMsg-container">
             <img
