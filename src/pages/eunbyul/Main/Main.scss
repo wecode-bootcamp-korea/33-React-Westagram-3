@@ -1,0 +1,470 @@
+$logo-font: 'Lobster', cursive;
+$icon-size: 22px;
+$border-and-icon-hover-color: rgb(180, 180, 180);
+$border-color: rgb(225, 224, 224);
+$background-color-white: hsl(0, 0%, 95%);
+$para-color: rgb(135, 135, 135);
+
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin mainAndArticleBorder {
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+}
+
+.Main {
+  background: hsl(0, 0%, 98%);
+  font-family: Arial, Helvetica, sans-serif;
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  i {
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  .nav-sticky {
+    width: 100%;
+    height: 62px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid $border-color;
+
+    .nav-box {
+      width: 62%;
+      height: 100%;
+      margin: 0 287px;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .nav-left {
+    @include flexSpaceBetween;
+    width: 158px;
+
+    .fa-instagram {
+      border-right: 1.5px solid #000;
+      padding-right: 12px;
+    }
+
+    .logo-title {
+      font-family: $logo-font;
+      font-size: 25px;
+      font-weight: 600;
+      color: #000;
+      padding-left: 12px;
+    }
+  }
+
+  .nav-center {
+    width: 250px;
+    height: 36px;
+    position: relative;
+
+    .search-input {
+      width: 100%;
+      height: 100%;
+      background-color: $background-color-white;
+      border: 1px solid $background-color-white;
+      border-radius: 10px;
+      padding-left: 40px;
+      font-size: 14px;
+    }
+
+    .fa-magnifying-glass {
+      position: absolute;
+      top: 9px;
+      left: 15px;
+      color: $border-and-icon-hover-color;
+      font-size: 16px;
+    }
+  }
+
+  .nav-right {
+    @include flexSpaceBetween;
+    width: 130px;
+    font-weight: thin;
+  }
+
+  /* -----main layout------ */
+
+  .main-page {
+    width: 62%;
+    margin: 0 auto;
+
+    .feeds {
+      width: 600px;
+      min-height: auto;
+      margin-top: 80px;
+      float: left;
+    }
+  }
+
+  /* story */
+
+  .story {
+    @include mainAndArticleBorder;
+    width: 100%;
+    height: 110px;
+    overflow-x: scroll;
+    display: flex;
+
+    /* hides the scroll bar */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .flex-div {
+      width: 90px;
+      height: 100%;
+      padding: 15px 8px;
+      text-align: center;
+
+      .border {
+        border: 2px solid rgb(177, 34, 108);
+        border-radius: 50%;
+        padding: 2px;
+        width: 65px;
+        height: 65px;
+
+        .story-img {
+          width: 58px;
+          height: 58px;
+          border: 1px solid $border-and-icon-hover-color;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .feeds-para {
+        color: rgb(71, 71, 71);
+        font-size: 12px;
+        margin-top: 2.5px;
+      }
+    }
+
+    .ind-story1 {
+      padding-left: 15px;
+    }
+  }
+
+  /* -----------article -----------*/
+
+  article {
+    @include mainAndArticleBorder;
+    width: 100%;
+    min-height: auto;
+    margin-top: 20px;
+
+    .article-img {
+      width: 100%;
+      height: 550px;
+    }
+  }
+
+  /* article - post head */
+  .post-head {
+    @include flexSpaceBetween;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid $border-color;
+    padding: 20px;
+
+    .post-profile {
+      @include flexSpaceBetween;
+      min-width: 125px;
+      flex-direction: row;
+
+      .profile-img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid $border-and-icon-hover-color;
+        border-radius: 50%;
+      }
+
+      .profile-id {
+        font-size: 15px;
+      }
+    }
+  }
+
+  /* article post icons */
+
+  .post-icons {
+    @include flexSpaceBetween;
+    width: 100%;
+    padding: 10px 15px;
+
+    .float-left {
+      display: flex;
+
+      .icon-left {
+        padding-right: 15px;
+        width: 35px;
+      }
+    }
+
+    .icon-left,
+    .icon-flex {
+      width: 18px;
+    }
+  }
+
+  /* article likes  */
+
+  .likes {
+    width: 100%;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+
+    .likes-img {
+      width: 25px;
+      height: 25px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .likes-para {
+      padding-left: 10px;
+      font-size: 14px;
+    }
+  }
+
+  /* article description */
+  .description {
+    min-height: 70px;
+
+    .desc-para {
+      margin: 5px 15px;
+      font-size: 14px;
+
+      &:last-child {
+        font-size: 12px;
+        color: $border-and-icon-hover-color;
+        padding-bottom: 8px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 10px 15px;
+      font-size: 15px;
+    }
+
+    li {
+      margin-top: 5px;
+    }
+  }
+
+  /* article comment */
+
+  .comment {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $border-color;
+
+    .comment-input {
+      width: 528px;
+      border: none;
+      padding: 0 15px;
+    }
+
+    .comment-btn {
+      width: 70px;
+      border: none;
+      background-color: #fff;
+      color: hsla(204, 100%, 48%, 0.4);
+      font-weight: bold;
+    }
+  }
+
+  /* add comment javascript */
+
+  #comment-list {
+    li {
+      @include flexSpaceBetween;
+
+      span:first-child {
+        font-weight: bold;
+      }
+
+      span:nth-child(2) {
+        width: 440px;
+      }
+
+      button {
+        border: none;
+        padding-right: 8px;
+        background-color: #fff;
+        font-weight: bold;
+        color: hsl(204, 100%, 48%);
+      }
+    }
+  }
+
+  /* --------main-right--------- */
+
+  /* aside profile */
+
+  .aside {
+    width: 315px;
+    height: 400px;
+    position: fixed;
+    top: 90px;
+    right: 286px;
+  }
+
+  .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+
+    .profile-img {
+      width: 58px;
+      height: 58px;
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .profile-id {
+      font-size: 15px;
+    }
+
+    .profile-name {
+      font-size: 12px;
+      margin-top: 4px;
+      color: $border-and-icon-hover-color;
+    }
+  }
+
+  /* aside follow recommendation */
+
+  .follow-recommendation {
+    height: 300px;
+
+    .aside-title {
+      @include flexSpaceBetween;
+      padding: 10px 15px 0px 15px;
+
+      .aside-para {
+        font-size: 14px;
+        color: $para-color;
+        font-weight: bold;
+      }
+
+      .aside-btn {
+        border: none;
+        background-color: hsl(0, 0%, 98%);
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    .people {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 15px;
+
+      .person {
+        @include flexSpaceBetween;
+        height: 60px;
+
+        .person-img {
+          width: 40px;
+          height: 40px;
+          border: 1px solid $border-color;
+          border-radius: 50%;
+        }
+
+        .person-btn {
+          border: none;
+          background-color: hsl(0, 0%, 98%);
+          color: hsl(204, 100%, 48%);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .id-recommendation {
+    width: 180px;
+
+    .recom-id {
+      font-size: 14px;
+    }
+
+    .recom-para {
+      font-size: 12px;
+      margin-top: 4px;
+      color: $para-color;
+    }
+  }
+
+  /* -------footer--------- */
+
+  .footer {
+    position: fixed;
+    top: 550px;
+    left: 930px;
+    color: rgb(196, 196, 196);
+    font-size: 15px;
+
+    .footer-para {
+      line-height: 18px;
+      letter-spacing: 1px;
+    }
+  }
+
+  // -------- media query ------------
+
+  @media only screen and (max-width: 1070px) {
+    .nav-sticky {
+      .nav-box {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    .main {
+      .feeds {
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;
+
+        .description {
+          text-align: left;
+        }
+      }
+    }
+
+    .aside,
+    .footer {
+      display: none;
+    }
+  }
+}
