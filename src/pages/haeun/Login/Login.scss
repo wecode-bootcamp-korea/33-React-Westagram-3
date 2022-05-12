@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 460px;
+  height: auto;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  background-color: white;
+
+  h1 {
+    font-family: 'Lobster', cursive;
+    padding: 40px 0;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 350px;
+      height: auto;
+      padding: 15px 0 15px 10px;
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+      background-color: #fafafa;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+
+      & :focus {
+        border: 1px solid #9a9a9a;
+        outline: none;
+      }
+
+      & ::placeholder {
+        color: #9a9a9a;
+      }
+    }
+
+    input:nth-child(1) {
+      margin-bottom: 7px;
+    }
+
+    input:nth-child(2) {
+      margin-bottom: 13px;
+    }
+
+    button {
+      width: 350px;
+      height: auto;
+      padding: 10px 0;
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+      background-color: #c4e1fb;
+      color: #ffffff;
+      margin-bottom: 120px;
+      font-size: 16px;
+      cursor: pointer;
+
+      & :focus {
+        border: none;
+        outline: none;
+      }
+
+      & :enabled {
+        background-color: #0095f6;
+      }
+    }
+  }
+
+  a {
+    margin-bottom: 20px;
+    color: #2b5783;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .icon {
+    font-size: 20px;
+    position: relative;
+    right: 4px;
+    top: 3px;
+  }
+}
+
+//페북색 color: #385185;
