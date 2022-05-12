@@ -1,10 +1,6 @@
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
 
-import { FiSend } from 'react-icons/fi';
-import { FaRegHeart, FaRegComment } from 'react-icons/fa';
-import { VscBookmark } from 'react-icons/vsc';
-
 function Main() {
   return (
     <div className="main">
@@ -23,25 +19,26 @@ function Main() {
                   />
                   <span className="userId">nueahooy</span>
                 </div>
-                <i className="fa-solid fa-ellipsis" />
               </div>
               <div className="feedImg" />
               <div className="feedBottom">
                 <div className="iconBox">
                   <div className="iconLeft">
-                    <button>
-                      <FaRegHeart className="icon" />
+                    <button className="heartImg">
+                      <img src="images/haeun/main-img/heart.png" alt="" />
                     </button>
-                    <button>
-                      <FaRegComment className="icon" />
+                    <button className="commentImg">
+                      <img src="images/haeun/main-img/comment.png" alt="" />
                     </button>
-                    <button>
-                      <FiSend className="icon" />
+                    <button className="shareImg">
+                      <img src="images/haeun/main-img/share.png" alt="" />
                     </button>
                   </div>
-                  <button className="iconRight">
-                    <VscBookmark className="icon" />
-                  </button>
+                  <div className="iconRight">
+                    <button className="shaveImg">
+                      <img src="images/haeun/main-img/shave.png" alt="" />
+                    </button>
+                  </div>
                 </div>
                 <div className="likes">
                   <img src="images/haeun/main-img/user2.jpg" alt="" />

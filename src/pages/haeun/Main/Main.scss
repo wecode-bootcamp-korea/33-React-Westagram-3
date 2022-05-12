@@ -165,13 +165,23 @@ button:focus {
         align-items: center;
         width: 100px;
 
-        .icon {
-          font-size: 22px;
+        button {
+          width: 22px;
+        }
+
+        img {
+          width: 22px;
         }
       }
 
-      .iconRight .icon {
-        font-size: 22px;
+      .iconRight {
+        button {
+          width: 22px;
+        }
+
+        img {
+          width: 22px;
+        }
       }
     }
 
