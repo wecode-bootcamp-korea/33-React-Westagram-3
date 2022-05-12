@@ -1,9 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-//Nav
-import Nav from './components/Nav/Nav';
-
 // chulhye's component
 import LoginChulhye from './pages/chulhye/Login/Login';
 import MainChulhye from './pages/chulhye/Main/Main';
@@ -28,7 +25,6 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/nav" element={<Nav />} />
         <Route path="/login-chulhye" element={<LoginChulhye />} />
         <Route path="/main-chulhye" element={<MainChulhye />} />
         <Route path="/login-hyesu" element={<LoginHyesu />} />
