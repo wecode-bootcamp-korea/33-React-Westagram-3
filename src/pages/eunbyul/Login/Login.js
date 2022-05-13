@@ -12,21 +12,21 @@ const Login = () => {
   return (
     <div className="Login">
       <section className="section">
-        <div className="outer-container">
+        <div className="outerContainer">
           <div className="container">
             <h1 className="logo">Westagram</h1>
-            <form id="input-box">
+            <form id="inputBox">
               <input
-                className="input-id"
+                className="inputId"
                 type="text"
-                id="user-id"
+                id="userId"
                 name="username"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
               />
               <input
-                className="input-id"
+                className="inputId"
                 type="password"
-                id="user-password"
+                id="userPassword"
                 name="password"
                 placeholder="비밀번호"
               />
@@ -34,15 +34,14 @@ const Login = () => {
                 로그인
               </button>
             </form>
-            <p className="login-error-msg hidden">
+            <p className="loginErrorMsg hidden">
               아이디와 비밀번호를 입력해주세요.
             </p>
-            <p className="lost-pw">비밀번호를 잊으셨나요?</p>
+            <p className="lostPw">비밀번호를 잊으셨나요?</p>
           </div>
-          <div className="signup-box">
-            <p className="signup-para">
-              계정이 없으신가요?{' '}
-              <span className="not-a-link-yet">가입하기</span>
+          <div className="signupBox">
+            <p className="signupPara">
+              계정이 없으신가요? <span className="noLinkYet">가입하기</span>
             </p>
           </div>
         </div>

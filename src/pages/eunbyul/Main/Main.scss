@@ -1,9 +1,9 @@
-$logo-font: 'Lobster', cursive;
-$icon-size: 22px;
-$border-and-icon-hover-color: rgb(180, 180, 180);
-$border-color: rgb(225, 224, 224);
-$background-color-white: hsl(0, 0%, 95%);
-$para-color: rgb(135, 135, 135);
+$logoFont: 'Lobster', cursive;
+$iconSize: 22px;
+$borderColor1: rgb(180, 180, 180);
+$borderColor: rgb(225, 224, 224);
+$bgWhite: hsl(0, 0%, 95%);
+$paraColor: rgb(135, 135, 135);
 
 @mixin flexSpaceBetween {
   display: flex;
@@ -13,7 +13,7 @@ $para-color: rgb(135, 135, 135);
 
 @mixin mainAndArticleBorder {
   background-color: #fff;
-  border: 1px solid $border-color;
+  border: 1px solid $borderColor;
   border-radius: 5px;
 }
 
@@ -40,15 +40,15 @@ $para-color: rgb(135, 135, 135);
     font-size: 25px;
   }
 
-  .nav-sticky {
+  .navFixed {
     width: 100%;
     height: 62px;
     position: fixed;
     top: 0;
     background-color: #fff;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $borderColor;
 
-    .nav-box {
+    .navBox {
       width: 62%;
       height: 100%;
       margin: 0 287px;
@@ -58,7 +58,7 @@ $para-color: rgb(135, 135, 135);
     }
   }
 
-  .nav-left {
+  .navLeft {
     @include flexSpaceBetween;
     width: 158px;
 
@@ -67,8 +67,8 @@ $para-color: rgb(135, 135, 135);
       padding-right: 12px;
     }
 
-    .logo-title {
-      font-family: $logo-font;
+    .logoTitle {
+      font-family: $logoFont;
       font-size: 25px;
       font-weight: 600;
       color: #000;
@@ -76,16 +76,16 @@ $para-color: rgb(135, 135, 135);
     }
   }
 
-  .nav-center {
+  .navCenter {
     width: 250px;
     height: 36px;
     position: relative;
 
-    .search-input {
+    .searchInput {
       width: 100%;
       height: 100%;
-      background-color: $background-color-white;
-      border: 1px solid $background-color-white;
+      background-color: $bgWhite;
+      border: 1px solid $bgWhite;
       border-radius: 10px;
       padding-left: 40px;
       font-size: 14px;
@@ -95,12 +95,12 @@ $para-color: rgb(135, 135, 135);
       position: absolute;
       top: 9px;
       left: 15px;
-      color: $border-and-icon-hover-color;
       font-size: 16px;
+      color: $paraColor;
     }
   }
 
-  .nav-right {
+  .navRight {
     @include flexSpaceBetween;
     width: 130px;
     font-weight: thin;
@@ -108,7 +108,7 @@ $para-color: rgb(135, 135, 135);
 
   /* -----main layout------ */
 
-  .main-page {
+  .mainPage {
     width: 62%;
     margin: 0 auto;
 
@@ -134,7 +134,7 @@ $para-color: rgb(135, 135, 135);
       display: none;
     }
 
-    .flex-div {
+    .flexDiv {
       width: 90px;
       height: 100%;
       padding: 15px 8px;
@@ -147,23 +147,23 @@ $para-color: rgb(135, 135, 135);
         width: 65px;
         height: 65px;
 
-        .story-img {
+        .storyImg {
           width: 58px;
           height: 58px;
-          border: 1px solid $border-and-icon-hover-color;
+          border: $borderColor1;
           border-radius: 50%;
           object-fit: cover;
         }
       }
 
-      .feeds-para {
+      .feedsPara {
         color: rgb(71, 71, 71);
         font-size: 12px;
         margin-top: 2.5px;
       }
     }
 
-    .ind-story1 {
+    .indStory1 {
       padding-left: 15px;
     }
   }
@@ -176,33 +176,33 @@ $para-color: rgb(135, 135, 135);
     min-height: auto;
     margin-top: 20px;
 
-    .article-img {
+    .articleImg {
       width: 100%;
       height: 550px;
     }
   }
 
   /* article - post head */
-  .post-head {
+  .postHead {
     @include flexSpaceBetween;
     width: 100%;
     height: 60px;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $borderColor;
     padding: 20px;
 
-    .post-profile {
+    .postProfile {
       @include flexSpaceBetween;
       min-width: 125px;
       flex-direction: row;
 
-      .profile-img {
+      .profileImg {
         width: 40px;
         height: 40px;
-        border: 1px solid $border-and-icon-hover-color;
+        border: $borderColor1;
         border-radius: 50%;
       }
 
-      .profile-id {
+      .profileId {
         font-size: 15px;
       }
     }
@@ -210,22 +210,22 @@ $para-color: rgb(135, 135, 135);
 
   /* article post icons */
 
-  .post-icons {
+  .postIcons {
     @include flexSpaceBetween;
     width: 100%;
     padding: 10px 15px;
 
-    .float-left {
+    .floatLeft {
       display: flex;
 
-      .icon-left {
+      .iconLeft {
         padding-right: 15px;
         width: 35px;
       }
     }
 
-    .icon-left,
-    .icon-flex {
+    .iconLeft,
+    .iconFlex {
       width: 18px;
     }
   }
@@ -238,14 +238,14 @@ $para-color: rgb(135, 135, 135);
     display: flex;
     align-items: center;
 
-    .likes-img {
+    .likesImg {
       width: 25px;
       height: 25px;
       object-fit: cover;
       border-radius: 50%;
     }
 
-    .likes-para {
+    .likesPara {
       padding-left: 10px;
       font-size: 14px;
     }
@@ -255,13 +255,12 @@ $para-color: rgb(135, 135, 135);
   .description {
     min-height: 70px;
 
-    .desc-para {
+    .descPara {
       margin: 5px 15px;
       font-size: 14px;
 
       &:last-child {
         font-size: 12px;
-        color: $border-and-icon-hover-color;
         padding-bottom: 8px;
       }
     }
@@ -284,15 +283,15 @@ $para-color: rgb(135, 135, 135);
     height: 50px;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $borderColor;
 
-    .comment-input {
+    .commentInput {
       width: 528px;
       border: none;
       padding: 0 15px;
     }
 
-    .comment-btn {
+    .commentBtn {
       width: 70px;
       border: none;
       background-color: #fff;
@@ -303,7 +302,7 @@ $para-color: rgb(135, 135, 135);
 
   /* add comment javascript */
 
-  #comment-list {
+  #commentList {
     li {
       @include flexSpaceBetween;
 
@@ -343,41 +342,40 @@ $para-color: rgb(135, 135, 135);
     align-items: center;
     height: 100px;
 
-    .profile-img {
+    .profileImg {
       width: 58px;
       height: 58px;
-      border: 1px solid $border-color;
+      border: 1px solid $borderColor;
       border-radius: 50%;
       margin-right: 15px;
     }
 
-    .profile-id {
+    .profileId {
       font-size: 15px;
     }
 
-    .profile-name {
+    .profileName {
       font-size: 12px;
       margin-top: 4px;
-      color: $border-and-icon-hover-color;
     }
   }
 
   /* aside follow recommendation */
 
-  .follow-recommendation {
+  .followRecommendation {
     height: 300px;
 
-    .aside-title {
+    .asideTitle {
       @include flexSpaceBetween;
       padding: 10px 15px 0px 15px;
 
-      .aside-para {
+      .asidePara {
         font-size: 14px;
-        color: $para-color;
+        color: $paraColor;
         font-weight: bold;
       }
 
-      .aside-btn {
+      .asideBtn {
         border: none;
         background-color: hsl(0, 0%, 98%);
         font-size: 12px;
@@ -394,14 +392,14 @@ $para-color: rgb(135, 135, 135);
         @include flexSpaceBetween;
         height: 60px;
 
-        .person-img {
+        .personImg {
           width: 40px;
           height: 40px;
-          border: 1px solid $border-color;
+          border: 1px solid $borderColor;
           border-radius: 50%;
         }
 
-        .person-btn {
+        .personBtn {
           border: none;
           background-color: hsl(0, 0%, 98%);
           color: hsl(204, 100%, 48%);
@@ -411,17 +409,17 @@ $para-color: rgb(135, 135, 135);
     }
   }
 
-  .id-recommendation {
+  .idRecommendation {
     width: 180px;
 
-    .recom-id {
+    .recomId {
       font-size: 14px;
     }
 
-    .recom-para {
+    .recomPara {
       font-size: 12px;
       margin-top: 4px;
-      color: $para-color;
+      color: $paraColor;
     }
   }
 
@@ -432,9 +430,9 @@ $para-color: rgb(135, 135, 135);
     top: 550px;
     left: 930px;
     color: rgb(196, 196, 196);
-    font-size: 15px;
+    font-size: 14px;
 
-    .footer-para {
+    .footerPara {
       line-height: 18px;
       letter-spacing: 1px;
     }
@@ -443,8 +441,8 @@ $para-color: rgb(135, 135, 135);
   // -------- media query ------------
 
   @media only screen and (max-width: 1070px) {
-    .nav-sticky {
-      .nav-box {
+    .navFixed {
+      .navBox {
         width: 100%;
         margin: 0 auto;
       }
