@@ -1,12 +1,13 @@
 import React from 'react';
 import './Main.scss';
 import Nav from '/Users/sozzln/Desktop/33-React-Westagram-3/src/components/Nav/nav.js';
+import Reply from '../Main/Reply';
 import '/Users/sozzln/Desktop/33-React-Westagram-3/src/styles/reset.scss';
 
 function Main() {
   return (
     <div className="container">
-      {/* <nav className="global-nav">
+      {/* <nav className="globalNav">
         <i className="fa-brands fa-instagram" />
         <div className="line" />
         <p className="navLogo">Westsagram</p>
@@ -67,7 +68,7 @@ function Main() {
               alt="contentsImg"
             />
           </div>
-          <div className="uploadedMsg-container">
+          <div className="uploadedMsgContainer">
             <img
               className="uploadedMsgInfo profileImg2"
               src="/images/chulhye/main-img/adrien-stachowiak-XRQRiX-tKyo-unsplash.jpg"
@@ -80,9 +81,9 @@ function Main() {
           <p className="uploadedReply">
             <b>alrbnb</b> 여기는 정말로다가 가고 싶게 생겼구나!
           </p>
-          <div className="reply-section">
+          {/* <div className="replySection">
             <ul className="replyBox" />
-            <div className="reply-container">
+            <div className="replyContainer">
               <input
                 type="text"
                 className="mainReply"
@@ -92,9 +93,10 @@ function Main() {
                 게시
               </button>
             </div>
-          </div>
+          </div> */}
+          <Reply />
         </div>
-        <div className="main-right">
+        <div className="mainRight">
           <div className="profileRightContainer">
             <img
               className="profileRightInfo profileRightImg"
@@ -120,7 +122,7 @@ function Main() {
                     src="/images/chulhye/main-img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
                     alt="img1"
                   />
-                  <p className="story-id">
+                  <p className="storyId">
                     alrbnb
                     <br />
                     <span className="time">10분 전</span>
@@ -132,7 +134,7 @@ function Main() {
                     src="/images/chulhye/main-img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
                     alt="img2"
                   />
-                  <p className="story-id">
+                  <p className="storyId">
                     alrbnb
                     <br />
                     <span className="time">30분 전</span>
@@ -141,10 +143,10 @@ function Main() {
                 <li className="storyList list3">
                   <img
                     className="storyImg"
-                    src="/images/chulhye/main-img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
+                    src="/images/chulhye/main-Img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
                     alt="img3"
                   />
-                  <p className="story-id">
+                  <p className="storyId">
                     alrbnb
                     <br />
                     <span className="time">1시간 전</span>
@@ -168,10 +170,10 @@ function Main() {
                     src="/images/chulhye/main-img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
                     alt="img1"
                   />
-                  <p className="recommend-id">
+                  <p className="recommendId">
                     alrbnb
                     <br />
-                    <span className="recommend-friends">
+                    <span className="recommendFriends">
                       alrbnb님 외 4명이...
                     </span>
                   </p>
@@ -185,10 +187,10 @@ function Main() {
                     src="/images/chulhye/main-img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
                     alt="img1"
                   />
-                  <p className="recommend-id">
+                  <p className="recommendId">
                     alrbnb
                     <br />
-                    <span className="recommend-friends">
+                    <span className="recommendFriends">
                       alrbnb님 외 5명이...
                     </span>
                   </p>
@@ -202,10 +204,10 @@ function Main() {
                     src="/images/chulhye/main-img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
                     alt="img1"
                   />
-                  <p className="recommend-id">
+                  <p className="recommendId">
                     alrbnb
                     <br />
-                    <span className="recommend-friends">
+                    <span className="recommendFriends">
                       alrbnb님 외 7명이...
                     </span>
                   </p>

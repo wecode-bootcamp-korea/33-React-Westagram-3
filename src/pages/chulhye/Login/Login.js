@@ -12,7 +12,7 @@ function Login() {
   // };
 
   return (
-    <div className="login-container">
+    <div className="loginContainer">
       <div className="loginPage">
         <div className="mainLogo" style={{ fontFamily: 'Lobster, cursive' }}>
           Westagram
