@@ -2,22 +2,22 @@ import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
 function Main() {
   return (
-    <div className="main_contents">
+    <div className="mainContents">
       <Nav />
       <main>
-        <div className="main-left">
-          <div className="main-header">
+        <div className="mainLeft">
+          <div className="mainHeader">
             <img src="/images/hyesukim/main-img/최우식.jpg" alt="최우식" />
-            <span className="story-id">dntlrdl</span>
+            <span className="storyId">dntlrdl</span>
           </div>
-          <div className="main-content">
-            <div className="main-content-header">
-              <div className="main-content-profile">
+          <div className="mainContent">
+            <div className="mainContentHeader">
+              <div className="mainContentProfile">
                 <img
                   src="/images/hyesukim/main-img/애기_멍멍.jpg"
                   alt="애기_멍멍"
                 />
-                <span className="my-id">
+                <span className="myId">
                   <b />
                   kimaesu
                   <b />
@@ -25,15 +25,15 @@ function Main() {
               </div>
               <div className="dots">•••</div>
             </div>
-            <div className="main-content-photo">
+            <div className="mainContentPhoto">
               <img
                 src="/images/hyesukim/main-img/애기_멍멍.jpg"
                 alt="애기_멍멍"
               />
             </div>
 
-            <div className="main-content-header">
-              <div className="main-content-like-area">
+            <div className="mainContentHeader">
+              <div className="mainContentLikeArea">
                 <img
                   className="heart2"
                   src="images/hyesukim/main-img/heart2.png"
@@ -57,28 +57,28 @@ function Main() {
                 alt="shave"
               />
             </div>
-            <div className="post_comment_wrap">
+            <div className="postCommentWrap">
               <div className="commentList">
                 <span>
                   <b>kimaesu</b> 애기 할아버지 착한 얼굴에 그렇지 못한 태도❤️
                   그래도 귀여우니까 괜찮음🧡
                 </span>
-                <div className="user_desc">
+                <div className="userDesc">
                   <b>follower1</b>
                   <span>존귀탱</span>
                 </div>
-                <div className="user_desc">
+                <div className="userDesc">
                   <b>follower2</b>
                   <span>넘나 귀여운것</span>
                 </div>
               </div>
-              <ul id="todo-list">
+              <ul id="toDoList">
                 <li />
               </ul>
 
-              <form id="todo-form">
+              <form id="toDoForm">
                 <input
-                  className="todoInput"
+                  className="toDoInput"
                   type="text"
                   placeholder="Write a To do and Press Enter"
                   required
@@ -89,39 +89,40 @@ function Main() {
         </div>
       </main>
 
-      <div className="main-right">
-        <div className="main-right-content-1">
-          <div className="main-right-content-2">
-            <div className="main-right-profile-2">
+      <div className="mainRight">
+        <div className="mainRightContent1">
+          <div className="mainRightContent2">
+            <div className="mainRightProfile2">
               <img src="/images/hyesukim/main-img/최우식.jpg" alt="최우식" />
-              <div className="main-right-id-2">
+              <div className="mainRightId2">
                 <b>chldntlr</b>
               </div>
             </div>
-            <div className="main-right-change-2">
+            <div className="mainRightChange2">
               <b>팔로우</b>
             </div>
           </div>
-          <div className="main-right-content-3">
-            <div className="main-right-profile-3">
+          <div className="mainRightContent3">
+            <div className="mainRightProfile3">
               <img src="/images/hyesukim/main-img/최우식.jpg" alt="최우식" />
-              <div className="main-right-id-3">
+              <div className="mainRightId3">
                 <b>chldntlr</b>
               </div>
             </div>
-            <div className="main-right-change-3">
+            <div className="mainRightChange3">
               <b>팔로우</b>
             </div>
           </div>
-          <div className="main-right-bottom-area">
-            <div className="main-rignt-bottom-textbox">
+          <div className="mainRightBottomArea">
+            <div className="mainRightBottomTextBox">
               <span>
                 소개 · 도움말 · 홍보 센터 · API · 채용 정보 ·<br />
               </span>
-              <span>
-                개인정보처리방침 · 약관 · 위치 · 인기 계정 ·
-                <p>해시태그 · 언어</p>
-              </span>
+              <span>개인정보처리방침 · 약관 · 위치 · 인기 계정 ·</span>
+              <br />
+              <span>해시태그 ·언어</span>
+              <br />
+              <br />
               <br />
               <span>@ 2022 INSTAGRAM FROM META</span>
             </div>

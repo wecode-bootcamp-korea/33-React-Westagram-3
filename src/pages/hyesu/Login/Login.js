@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div>
-      <div className="login-form">
+      <div className="loginForm">
         <div className="logo">
           <h1>Westagram</h1>
         </div>
-        <form className="user-form">
+        <form className="userForm">
           <input
             className="userName"
             type="text"
