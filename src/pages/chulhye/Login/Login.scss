@@ -59,6 +59,12 @@ a:visited {
       opacity: 0.6;
       transition: 0.3s;
     }
+
+    .activate {
+      opacity: 1;
+      cursor: pointer;
+    }
+
     .passwordFind {
       width: 80%;
       height: 30px;
@@ -70,10 +76,6 @@ a:visited {
       font-size: 14px;
     }
   }
-}
-.activate {
-  opacity: 1;
-  cursor: pointer;
 }
 
 .loginToMain {
