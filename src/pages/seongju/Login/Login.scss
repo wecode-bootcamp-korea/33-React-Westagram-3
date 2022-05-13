@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-.login_main {
+
+.loginMain {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 90vh;
-  .login_wrapper {
+  .loginWrapper {
     width: 37.5em;
     height: 50em;
     border: 0.13em solid #e6e6e6;
     text-align: center;
-    .login_title {
+    .loginTitle {
       margin-top: 7%;
       font-family: 'Lobster', cursive;
       font-size: 5.625em;
@@ -29,7 +30,7 @@
       font-size: 1.063em;
       font-weight: bold;
     }
-    .login_button {
+    .loginButton {
       width: 21em;
       height: 3em;
       margin-top: 0.625em;
@@ -47,7 +48,7 @@
         opacity: 1;
       }
     }
-    #password_forget {
+    #passwordForget {
       display: block;
       margin-top: 50%;
       color: #365f89;

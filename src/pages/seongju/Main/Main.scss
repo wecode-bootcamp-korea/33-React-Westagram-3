@@ -2,47 +2,6 @@ $back-color: white;
 $font-color: gray;
 $border-style: 1px solid #e6e6e6;
 
-/* nav bar section */
-.main_nav {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: $border-style;
-  position: fixed;
-  background-color: $back-color;
-  z-index: 100;
-
-  .westagram_icon {
-    margin-left: -2%;
-    border-right: 3px solid #e6e6e6;
-    width: 70px;
-  }
-
-  .westagram_logo {
-    margin-left: 30px;
-    font-size: 30px;
-    font-family: 'Lobster', cursive;
-  }
-
-  .searchBar {
-    margin-left: 500px;
-    width: 300px;
-    height: 40px;
-    text-align: center;
-    font-size: 15px;
-    border: 2px solid #e6e6e6;
-  }
-
-  .nav_icon {
-    margin-left: 400px;
-    img {
-      margin-left: 60px;
-    }
-  }
-}
-
 /* main page section */
 main {
   height: 114vh;
@@ -65,11 +24,11 @@ main {
       left: 4%;
       top: -4.3%;
 
-      .feeds_top {
+      .feedsTop {
         height: 60px;
         margin-bottom: 10px;
 
-        .feeds_top_user_icon {
+        .feedsTopUserIcon {
           border-radius: 50%;
           position: absolute;
           left: 3%;
@@ -77,18 +36,18 @@ main {
           object-fit: cover;
         }
 
-        .feeds_top_user_id,
-        .feeds_top_user_name {
+        .feedsTopUserId,
+        .feedsTopUserName {
           position: absolute;
           left: 11%;
           top: 0.7%;
         }
 
-        .feeds_top_user_name {
+        .feedsTopUserName {
           top: 2.4%;
         }
 
-        #feeds_top_update_button {
+        #feedsTopUpdateButton {
           height: 30px;
           width: 30px;
           border-radius: 50%;
@@ -97,17 +56,16 @@ main {
           position: absolute;
           right: 2%;
           top: 1%;
-          background-color: $back-color;
         }
       }
 
-      .feeds_user_image {
+      .feedsUserImage {
         position: absolute;
         top: 6%;
         object-fit: cover;
       }
 
-      .feeds_middle {
+      .feedsMiddle {
         position: absolute;
         left: 3%;
         display: flex;
@@ -115,34 +73,34 @@ main {
         width: 720px;
         top: 63%;
 
-        .feeds_middle_icon_comment,
-        .feeds_middle_icon_share {
+        .feedsMiddleIconComment,
+        .feedsMiddleIconShare {
           margin-left: 20px;
         }
       }
 
-      .feeds_like_wrapper {
+      .feedsLikeWrapper {
         position: absolute;
         top: 67.5%;
         left: 3%;
         width: 720px;
         height: 400px;
 
-        .friends_one {
+        .friendsOne {
           border-radius: 50%;
           object-fit: cover;
           margin-bottom: 10px;
         }
 
-        .feeds_how_many_likes {
+        .feedsHowManyLikes {
           position: absolute;
           top: 4%;
           left: 8%;
         }
       }
 
-      .feeds_comment_wrapper {
-        .feeds_comment_input {
+      .feedsCommentWrapper {
+        .feedsCommentInput {
           position: absolute;
           top: 85%;
           left: 1%;
@@ -152,7 +110,7 @@ main {
           border: $border-style;
         }
 
-        .feeds_comment_button {
+        .feedsCommentButton {
           position: absolute;
           top: 87%;
           right: 5%;
@@ -163,7 +121,7 @@ main {
   }
 
   /* main_side section */
-  .main_side {
+  .mainSide {
     border: $border-style;
     height: 75vh;
     width: 500px;
@@ -171,13 +129,13 @@ main {
     top: 13%;
     position: fixed;
 
-    .main_side_top {
+    .mainSideTop {
       margin-top: 30px;
       position: relative;
       height: 100px;
       width: 500px;
 
-      .side_top_user_icon {
+      .sideTopUserIcon {
         position: absolute;
         left: 10%;
         top: 22%;
@@ -185,19 +143,19 @@ main {
         object-fit: cover;
       }
 
-      .side_top_user_name,
-      .side_top_user_id {
+      .sideTopUserName,
+      .sideTopUserId {
         position: absolute;
         left: 25%;
         top: 50%;
       }
 
-      .side_top_user_id {
+      .sideTopUserId {
         top: 22%;
       }
     }
 
-    .main_side_story_wrapper {
+    .mainSideStoryWrapper {
       margin-top: 20px;
       border-top: $border-style;
       border-bottom: $border-style;
@@ -205,7 +163,7 @@ main {
       width: 500px;
       position: relative;
 
-      .main_side_story_title {
+      .mainSideStoryTitle {
         position: absolute;
         left: 5%;
         font-size: 18px;
@@ -214,52 +172,52 @@ main {
         top: 5%;
       }
 
-      .main_side_story_showAll {
+      .mainSideStoryShowAll {
         position: absolute;
         right: 5%;
         font-weight: bold;
         top: 5%;
       }
 
-      .story_user_icon {
+      .storyUserIcon {
         border-radius: 50%;
         position: absolute;
         left: 5%;
         object-fit: cover;
       }
 
-      #story_user1 {
+      #storyUser1 {
         top: 20%;
       }
 
-      #story_user2 {
+      #storyUser2 {
         top: 45%;
       }
 
-      #story_user3 {
+      #storyUser3 {
         top: 70%;
       }
 
-      .stroy_user_name {
+      .stroyUserName {
         font-weight: bold;
         position: absolute;
         left: 16%;
         display: block;
       }
 
-      #story_user_name1 {
+      #storyUserName1 {
         top: 20%;
       }
 
-      #story_user_name2 {
+      #storyUserName2 {
         top: 45%;
       }
 
-      #story_user_name3 {
+      #storyUserName3 {
         top: 70%;
       }
 
-      .story_user_time {
+      .storyUserTime {
         color: $font-color;
         display: block;
         position: absolute;
@@ -267,26 +225,26 @@ main {
         font-size: 13px;
       }
 
-      #story_user_time1 {
+      #storyUserTime1 {
         top: 30%;
       }
 
-      #story_user_time2 {
+      #storyUserTime2 {
         top: 55%;
       }
 
-      #story_user_time3 {
+      #storyUserTime3 {
         top: 80%;
       }
     }
 
-    .main_side_recommend_wrapper {
+    .mainSideRecommendWrapper {
       margin-top: 32px;
       height: 260px;
       width: 500px;
       position: relative;
 
-      .main_side_recommend_title {
+      .mainSideRecommendTitle {
         color: $font-color;
         font-weight: bold;
         font-size: 18px;
@@ -295,33 +253,33 @@ main {
         top: -5%;
       }
 
-      .main_side_recommend_showAll {
+      .mainSideRecommendShowAll {
         position: absolute;
         right: 5%;
         font-weight: bold;
         top: -5%;
       }
 
-      .recommend_user_icon {
+      .recommendUserIcon {
         border-radius: 50%;
         position: absolute;
         left: 5%;
         object-fit: cover;
       }
 
-      #recommend_user1 {
+      #recommendUser1 {
         top: 20%;
       }
 
-      #recommend_user2 {
+      #recommendUser2 {
         top: 45%;
       }
 
-      #recommend_user3 {
+      #recommendUser3 {
         top: 70%;
       }
 
-      .recommend_user_name {
+      .recommendUserName {
         font-weight: bold;
         position: absolute;
         left: 16%;
@@ -330,33 +288,33 @@ main {
         }
       }
 
-      #recommend_user1_name {
+      #recommendUser1Name {
         top: 20%;
       }
 
-      #recommend_user2_name {
+      #recommendUser2Name {
         top: 45%;
       }
 
-      #recommend_user3_name {
+      #recommendUser3Name {
         top: 70%;
       }
 
-      .recommend_follow_text {
+      .recommendFollowText {
         color: $font-color;
         position: absolute;
         left: 16%;
       }
 
-      #follow_text1 {
+      #followText1 {
         top: 30%;
       }
 
-      #follow_text2 {
+      #followText2 {
         top: 55%;
       }
 
-      #follow_text3 {
+      #followText3 {
         top: 80%;
       }
 
@@ -366,15 +324,15 @@ main {
         right: 10%;
       }
 
-      #follow_1 {
+      #followFirst {
         top: 20%;
       }
 
-      #follow_2 {
+      #followSecond {
         top: 45%;
       }
 
-      #follow_3 {
+      #followThird {
         top: 70%;
       }
     }
