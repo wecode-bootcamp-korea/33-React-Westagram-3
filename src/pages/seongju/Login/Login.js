@@ -14,12 +14,10 @@ function Login() {
 
   const handleIdInput = event => {
     setId(event.target.value);
-    console.log(Id);
   };
 
   const handlePwInput = event => {
     setPw(event.target.value);
-    console.log(Pw);
   };
 
   return (
@@ -38,7 +36,12 @@ function Login() {
           placeholder="비밀번호"
           onChange={handlePwInput}
         />
-        <button type="submit" className="loginButton" onClick={goToMain}>
+        <button
+          type="submit"
+          className="loginButton"
+          disabled={Id.includes('@') && Pw.length >= 5 ? false : true}
+          onClick={goToMain}
+        >
           로그인
         </button>
         <span id="passwordForget">
