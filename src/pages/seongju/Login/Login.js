@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import './Login.scss';
 
 function Login() {
-  const [value, setValue] = useState();
+  const [Id, setId] = useState('');
+  const [Pw, setPw] = useState('');
   const navigate = useNavigate();
 
   const goToMain = () => {
@@ -12,8 +13,13 @@ function Login() {
   };
 
   const handleIdInput = event => {
-    setValue(event.target.value);
-    console.log(event.value);
+    setId(event.target.value);
+    console.log(Id);
+  };
+
+  const handlePwInput = event => {
+    setPw(event.target.value);
+    console.log(Pw);
   };
 
   return (
@@ -26,7 +32,12 @@ function Login() {
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={handleIdInput}
         />
-        <input type="password" className="password" placeholder="비밀번호" />
+        <input
+          type="password"
+          className="password"
+          placeholder="비밀번호"
+          onChange={handlePwInput}
+        />
         <button type="submit" className="loginButton" onClick={goToMain}>
           로그인
         </button>
