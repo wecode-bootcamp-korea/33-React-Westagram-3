@@ -25,16 +25,16 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login-chulhye" element={<LoginChulhye />} />
-        <Route path="/main-chulhye" element={<MainChulhye />} />
+        {/* <Route path="/login-chulhye" element={<LoginChulhye />} />
+        <Route path="/main-chulhye" element={<MainChulhye />} /> */}
         <Route path="/login-hyesu" element={<LoginHyesu />} />
         <Route path="/main-hyesu" element={<MainHyesu />} />
-        <Route path="/login-haeun" element={<LoginHaeun />} />
+        {/* <Route path="/login-haeun" element={<LoginHaeun />} />
         <Route path="/main-haeun" element={<MainHaeun />} />
         <Route path="/login-eunbyul" element={<LoginEunbyul />} />
         <Route path="/main-eunbyul" element={<MainEunbyul />} />
         <Route path="/login-seongju" element={<LoginSeongju />} />
-        <Route path="/main-seongju" element={<MainSeongju />} />
+        <Route path="/main-seongju" element={<MainSeongju />} /> */}
       </Routes>
     </BrowserRouter>
   );
