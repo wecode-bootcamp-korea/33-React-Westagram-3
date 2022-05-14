@@ -7,7 +7,6 @@ import { useState } from 'react';
 const Login = () => {
   const [inputId, setInputId] = useState('');
   const [inputPw, setInputPw] = useState('');
-
   const handleIdInput = e => {
     setInputId(e.target.value);
   };
@@ -15,10 +14,7 @@ const Login = () => {
     setInputPw(e.target.value);
   };
 
-  // const loginStart = () => {
-  //   const validation = inputId.includes('@') && inputPw.length >= 5;
-  //   return !validation;
-  // };
+  const disable = inputId.includes('@') && inputPw.length >= 5 ? true : false;
 
   return (
     <div>
@@ -42,7 +38,9 @@ const Login = () => {
         </form>
 
         <Link to="/main-hyesu">
-          <button className="loginBtn">로그인</button>
+          <button type="button" className="loginBtn" disabled={!disable}>
+            로그인
+          </button>
         </Link>
 
         <div className="links">비밀번호를 잊어버리셨나요?</div>
