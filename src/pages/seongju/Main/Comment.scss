@@ -1,0 +1,21 @@
+.inputComment {
+  padding-top: 5px;
+  .commentLike {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    right: -110%;
+    cursor: pointer;
+  }
+  .countLike {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+  .commentDelete {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    right: -120%;
+  }
+}

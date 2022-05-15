@@ -85,6 +85,28 @@ main {
         left: 3%;
         width: 720px;
         height: 400px;
+        .feedsCommentWrapper {
+          position: relative;
+          top: 70%;
+          left: -3.3%;
+          .feedsCommentInput {
+            position: absolute;
+            top: 85%;
+            left: 1%;
+            width: 765px;
+            height: 70px;
+            font-size: 17px;
+            border: 1px solid #e6e6e6;
+          }
+
+          .feedsCommentButton {
+            position: absolute;
+            margin-top: 3%;
+            left: 99%;
+            opacity: 1;
+            width: 50px;
+          }
+        }
 
         .friendsOne {
           position: absolute;
@@ -97,46 +119,28 @@ main {
           position: absolute;
           top: 4%;
           left: 8%;
-          .inputComment {
-            padding-top: 5px;
-            .commentLike {
-              position: absolute;
-              border: none;
-              background-color: transparent;
-              right: -110%;
-              cursor: pointer;
-            }
-            .countLike {
-              margin-left: 15px;
-              font-size: 15px;
-            }
-            .commentDelete {
-              position: absolute;
-              border: none;
-              background-color: transparent;
-              cursor: pointer;
-              right: -120%;
-            }
+        }
+        .feedsCommentWrapper {
+          position: relative;
+          top: 70%;
+          left: -3.3%;
+          .feedsCommentInput {
+            position: absolute;
+            top: 85%;
+            left: 1%;
+            width: 765px;
+            height: 70px;
+            font-size: 17px;
+            border: 1px solid #e6e6e6;
           }
-        }
-      }
 
-      .feedsCommentWrapper {
-        .feedsCommentInput {
-          position: absolute;
-          top: 85%;
-          left: 1%;
-          width: 765px;
-          height: 70px;
-          font-size: 17px;
-          border: $border-style;
-        }
-
-        .feedsCommentButton {
-          position: absolute;
-          top: 87%;
-          right: 5%;
-          opacity: 1;
+          .feedsCommentButton {
+            position: absolute;
+            margin-top: 3%;
+            left: 99%;
+            opacity: 1;
+            width: 50px;
+          }
         }
       }
     }
