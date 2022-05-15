@@ -87,15 +87,37 @@ main {
         height: 400px;
 
         .friendsOne {
+          position: absolute;
           border-radius: 50%;
           object-fit: cover;
-          margin-bottom: 10px;
+          left: -0.5%;
         }
 
         .feedsHowManyLikes {
           position: absolute;
           top: 4%;
           left: 8%;
+          .inputComment {
+            padding-top: 5px;
+            .commentLike {
+              position: absolute;
+              border: none;
+              background-color: transparent;
+              right: -110%;
+              cursor: pointer;
+            }
+            .countLike {
+              margin-left: 15px;
+              font-size: 15px;
+            }
+            .commentDelete {
+              position: absolute;
+              border: none;
+              background-color: transparent;
+              cursor: pointer;
+              right: -120%;
+            }
+          }
         }
       }
 
@@ -114,7 +136,7 @@ main {
           position: absolute;
           top: 87%;
           right: 5%;
-          opacity: 0.3;
+          opacity: 1;
         }
       }
     }

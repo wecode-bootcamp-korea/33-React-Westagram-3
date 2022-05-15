@@ -1,8 +1,20 @@
 import React, { Fragment } from 'react';
 import './Main.scss';
 import Nav from '../../../components/Nav/nav';
+import { useState } from 'react';
 
 function Main() {
+  let [input, setInput] = useState('');
+  let [comment, setComment] = useState([]);
+  let [like, setLike] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+
+  const pushCommnet = () => {
+    let copy = [...comment];
+    copy.push(input);
+    setComment(copy);
+    setInput('');
+  };
+
   return (
     <Fragment>
       <Nav />
@@ -81,15 +93,66 @@ function Main() {
               />
               <p className="feedsHowManyLikes">
                 <b>AhnSeoung_Ju</b>님 <b>외 4명</b>이 좋아합니다.
+                {comment.map(function (a, i) {
+                  return (
+                    <div>
+                      <p className="inputComment">
+                        <b>wkddn1359</b> {comment[i]}
+                        <span className="countLike">👍{like[i]}</span>
+                        <button
+                          onClick={e => {
+                            e.stopPropagation();
+                            let copy = [...like];
+                            copy[i] += 1;
+                            setLike(copy);
+                          }}
+                          className="commentLike"
+                        >
+                          👍
+                        </button>
+                        <button
+                          onClick={() => {
+                            let copy = [...comment];
+                            copy.splice(i, 1);
+                            setComment(copy);
+                          }}
+                          className="commentDelete"
+                        >
+                          ❌
+                        </button>
+                      </p>
+                    </div>
+                  );
+                })}
               </p>
             </div>
             <section className="feedsCommentWrapper">
               <input
+                onChange={e => {
+                  setInput(e.target.value);
+                }}
+                onKeyPress={e => {
+                  if (e.key === 'Enter') {
+                    if (e.target.value.length === 0) {
+                      alert('댓글을 입력하세요.');
+                    } else {
+                      pushCommnet();
+                    }
+                  }
+                }}
+                value={input}
                 type="text"
                 className="feedsCommentInput"
                 placeholder="&#128512; 댓글 달기..."
               />
-              <button className="feedsCommentButton">게시</button>
+              <button
+                onClick={() => {
+                  pushCommnet();
+                }}
+                className="feedsCommentButton"
+              >
+                게시
+              </button>
             </section>
           </article>
         </div>
