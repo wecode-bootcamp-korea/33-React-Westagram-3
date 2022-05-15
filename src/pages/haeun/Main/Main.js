@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
+import Comment from './Comment/Comment';
 
 function Main() {
   const [comment, setComment] = useState('');
@@ -73,15 +74,7 @@ function Main() {
                   <p className="commentTime">42분 전</p>
                   <ul className="commentList">
                     {commentList.map((comment, idx) => {
-                      return (
-                        <li key={idx}>
-                          <strong>{comment.id}</strong>
-                          <div className="commentText">
-                            <span>{comment.text}</span>
-                            <button>ⅹ</button>
-                          </div>
-                        </li>
-                      );
+                      return <Comment key={idx} comment={comment} />;
                     })}
                   </ul>
                 </div>
@@ -110,7 +103,7 @@ function Main() {
             </div>
 
             <div className="storyContainer">
-              <div className="storyText">
+              <div className="storyHeader">
                 <span>스토리</span>
                 <span>모두 보기</span>
               </div>
@@ -147,15 +140,15 @@ function Main() {
             </div>
 
             <div className="rcmndContainer">
-              <div className="rcmndText">
+              <div className="rcmdHeader">
                 <span>회원님을 위한 추천</span>
                 <span>모두 보기</span>
               </div>
               <ul>
                 <li className="rcmndList">
-                  <div className="imgAndUserInfo">
+                  <div className="account">
                     <img src="images/haeun/main-img/user2.jpg" alt="" />
-                    <div className="userInfo">
+                    <div className="accountId">
                       <strong>spring</strong>
                       <span>areyouberry님 외 2명이 ...</span>
                     </div>
@@ -163,9 +156,9 @@ function Main() {
                   <button>팔로우</button>
                 </li>
                 <li className="rcmndList">
-                  <div className="imgAndUserInfo">
+                  <div className="account">
                     <img src="images/haeun/main-img/user2.jpg" alt="" />
-                    <div className="userInfo">
+                    <div className="accountId">
                       <strong>summer</strong>
                       <span>areyouberry님 외 2명이 ...</span>
                     </div>
@@ -173,9 +166,9 @@ function Main() {
                   <button>팔로우</button>
                 </li>
                 <li className="rcmndList">
-                  <div className="imgAndUserInfo">
+                  <div className="account">
                     <img src="images/haeun/main-img/user2.jpg" alt="" />
-                    <div className="userInfo">
+                    <div className="accountId">
                       <strong>winter</strong>
                       <span>areyouberry님 외 2명이 ...</span>
                     </div>

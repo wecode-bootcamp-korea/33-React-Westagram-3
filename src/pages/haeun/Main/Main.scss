@@ -304,7 +304,7 @@ button:focus {
     border-radius: 2px;
     overflow: scroll;
 
-    .storyText {
+    .storyHeader {
       display: flex;
       justify-content: space-between;
       margin-bottom: 10px;
@@ -358,7 +358,7 @@ button:focus {
     border: 1px solid #cecece;
     border-radius: 2px;
 
-    .rcmndText {
+    .rcmdHeader {
       display: flex;
       justify-content: space-between;
       font-size: 13px;
@@ -381,7 +381,7 @@ button:focus {
         margin-bottom: 0;
       }
 
-      .imgAndUserInfo {
+      .account {
         display: flex;
         align-items: center;
 
@@ -392,7 +392,7 @@ button:focus {
           border-radius: 50%;
         }
 
-        .userInfo {
+        .accountId {
           display: flex;
           flex-direction: column;
           font-size: 13px;
