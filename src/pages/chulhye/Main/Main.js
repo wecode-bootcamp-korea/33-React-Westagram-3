@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.scss';
 import Nav from '/Users/sozzln/Desktop/33-React-Westagram-3/src/components/Nav/nav.js';
-import Reply from '../Main/Reply';
+import CommentList from '../Main/CommentList';
 import '/Users/sozzln/Desktop/33-React-Westagram-3/src/styles/reset.scss';
 
 function Main() {
@@ -94,7 +94,7 @@ function Main() {
               </button>
             </div>
           </div> */}
-          <Reply />
+          <CommentList />
         </div>
         <div className="mainRight">
           <div className="profileRightContainer">
