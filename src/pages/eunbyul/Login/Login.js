@@ -1,10 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
-  const navigate = useNavigate();
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+  const handleInput = event => setId(event.target.value);
+  const handlePassword = event => setPw(event.target.value);
 
+  const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main-eunbyul');
   };
@@ -17,6 +22,8 @@ const Login = () => {
             <h1 className="logo">Westagram</h1>
             <form id="inputBox">
               <input
+                onChange={handleInput}
+                value={id}
                 className="inputId"
                 type="text"
                 id="userId"
@@ -24,6 +31,8 @@ const Login = () => {
                 placeholder="전화번호, 사용자 이름 또는 이메일"
               />
               <input
+                onChange={handlePassword}
+                value={pw}
                 className="inputId"
                 type="password"
                 id="userPassword"
