@@ -1,7 +1,25 @@
+import React, { useState } from 'react';
+
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
 
 function Main() {
+  const [comment, setComment] = useState('');
+  const [commentList, setCommentList] = useState([
+    { id: 'd.ddablue', text: '우와 초콜렛이다' },
+  ]);
+
+  const handleSaveComment = e => {
+    e.preventDefault();
+    setComment(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setCommentList([...commentList, { id: 'nueahooy', text: comment }]);
+    setComment('');
+  };
+
   return (
     <div className="main">
       <Nav />
@@ -54,19 +72,28 @@ function Main() {
                 <div className="commentBox">
                   <p className="commentTime">42분 전</p>
                   <ul className="commentList">
-                    <li>
-                      <strong>d.ddablue</strong>
-                      <div className="commentText">
-                        <span>우와 초콜렛이다</span>
-                        <button>ⅹ</button>
-                      </div>
-                    </li>
+                    {commentList.map((comment, idx) => {
+                      return (
+                        <li key={idx}>
+                          <strong>{comment.id}</strong>
+                          <div className="commentText">
+                            <span>{comment.text}</span>
+                            <button>ⅹ</button>
+                          </div>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
               <form className="commentInput">
-                <input type="text" placeholder="댓글 달기..." />
-                <button className="commentBtn" disabled>
+                <input
+                  type="text"
+                  placeholder="댓글 달기..."
+                  value={comment}
+                  onChange={e => handleSaveComment(e)}
+                />
+                <button className="commentBtn" onClick={e => handleSubmit(e)}>
                   게시
                 </button>
               </form>

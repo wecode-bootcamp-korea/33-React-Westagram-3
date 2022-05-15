@@ -56,9 +56,3 @@ function Login() {
 }
 
 export default Login;
-
-//onClick={goToMain}
-
-// onChange = {
-//
-// }
