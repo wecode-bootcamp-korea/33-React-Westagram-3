@@ -34,10 +34,7 @@ function Main() {
                 <b>wecode_bootcamp</b>
               </span>
               <span className="feedsTopUserName">WeCode - 위코드</span>
-              <button
-                id="feedsTopUpdateButton"
-                class="fa-solid fa-ellipsis"
-              ></button>
+              <button id="feedsTopUpdateButton" class="fa-solid fa-ellipsis" />
             </div>
             <img
               src="/images/seongju/main-img/myphoto.webp"
@@ -56,7 +53,7 @@ function Main() {
                     alt="피드 하트 아이콘"
                   />
                 </a>
-                <a href="#" className="feedsMiddleIconComment">
+                <a href="#Top" className="feedsMiddleIconComment">
                   <img
                     src="/images/seongju/main-img/comment.png"
                     width="35"
@@ -64,7 +61,7 @@ function Main() {
                     alt="피드 댓글 아이콘"
                   />
                 </a>
-                <a href="#" className="feedsMiddleIconShare">
+                <a href="#Top" className="feedsMiddleIconShare">
                   <img
                     src="/images/seongju/main-img/share.png"
                     width="35"
@@ -74,7 +71,7 @@ function Main() {
                 </a>
               </div>
               <div>
-                <a href="#" className="feedsMiddleIconSave">
+                <a href="#Top" className="feedsMiddleIconSave">
                   <img
                     src="/images/seongju/main-img/shave.png"
                     width="35"
@@ -149,7 +146,7 @@ function Main() {
           <div className="mainSideStoryWrapper">
             <p className="mainSideStoryTitle">스토리</p>
             <p className="mainSideStoryShowAll">
-              <a href="#">모두 보기</a>
+              <a href="#Top">모두 보기</a>
             </p>
             <img
               src="/images/seongju/main-img/friends_2.webp"
@@ -197,7 +194,7 @@ function Main() {
           <div className="mainSideRecommendWrapper">
             <p className="mainSideRecommendTitle">회원님을 위한 추천</p>
             <p className="mainSideRecommendShowAll">
-              <a href="#">모두 보기</a>
+              <a href="#Top">모두 보기</a>
             </p>
             <img
               src="/images/seongju/main-img/friends_5.webp"
@@ -207,13 +204,17 @@ function Main() {
               className="recommendUserIcon"
               alt="추천 친구5 사진"
             />
-            <a id="recommendUser1Name" className="recommendUserName" href="#">
+            <a
+              id="recommendUser1Name"
+              className="recommendUserName"
+              href="#Top"
+            >
               Son_Star
             </a>
             <span id="followText1" className="recommendFollowText">
               회원님을 팔로우합니다
             </span>
-            <a href="#" id="followFirst" className="follow">
+            <a href="#Top" id="followFirst" className="follow">
               팔로우
             </a>
             <img
@@ -224,13 +225,17 @@ function Main() {
               className="recommendUserIcon"
               alt="추천 친구6 사진"
             />
-            <a href="#" id="recommendUser2Name" className="recommendUserName">
+            <a
+              href="#Top"
+              id="recommendUser2Name"
+              className="recommendUserName"
+            >
               GiSak_male
             </a>
             <span id="followText2" className="recommendFollowText">
               회원님을 팔로우합니다
             </span>
-            <a href="#" id="followSecond" className="follow">
+            <a href="#Top" id="followSecond" className="follow">
               팔로우
             </a>
             <img
@@ -241,17 +246,21 @@ function Main() {
               className="recommendUserIcon"
               alt="추천 친구7 사진"
             />
-            <a href="#" id="recommendUser3Name" className="recommendUserName">
+            <a
+              href="#Top"
+              id="recommendUser3Name"
+              className="recommendUserName"
+            >
               Robinson_France
             </a>
             <span id="followText3" className="recommendFollowText">
               회원님을 팔로우합니다
             </span>
-            <a href="#" id="followThird" className="follow">
+            <a href="#Top" id="followThird" className="follow">
               팔로우
             </a>
           </div>
-          <a href="#" className="information">
+          <a href="#Top" className="information">
             소개.도움말.홍보 센터.API.채용 정보. 개인정보처리방침.약관.위치.인기
             계정.해시태그.언어
           </a>

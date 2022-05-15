@@ -6,8 +6,8 @@ function Comment(props) {
     <>
       {props.comment.map(function (a, i) {
         return (
-          <div>
-            <p className="inputComment">
+          <div key="0">
+            <p className="inputComment" key="0">
               <b>wkddn1359</b> {props.comment[i]}
               <span className="countLike">👍{props.like[i]}</span>
               <button
