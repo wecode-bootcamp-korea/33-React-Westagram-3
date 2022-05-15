@@ -43,12 +43,12 @@
       cursor: pointer;
       outline: none;
 
-      & :focus {
+      &:focus {
         border: 1px solid #9a9a9a;
         outline: none;
       }
 
-      & ::placeholder {
+      &::placeholder {
         color: #9a9a9a;
       }
     }
@@ -73,12 +73,12 @@
       font-size: 16px;
       cursor: pointer;
 
-      & :focus {
+      &:focus {
         border: none;
         outline: none;
       }
 
-      & :enabled {
+      &:enabled {
         background-color: #0095f6;
       }
     }

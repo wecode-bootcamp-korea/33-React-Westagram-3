@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 function Login() {
   const [idInput, setIdInput] = useState();
   const [pwInput, setPwInput] = useState();
+  const [disabled, setdisabled] = useState(true);
   const navigate = useNavigate();
 
   const goToMain = () => {
@@ -20,6 +20,12 @@ function Login() {
     setPwInput(e.target.value);
   };
 
+  const onBtnActive = () => {
+    idInput.includes('@') && pwInput.length > 5
+      ? setdisabled(false)
+      : setdisabled(true);
+  };
+
   return (
     <main className="loginContainer">
       <h1>westagram</h1>
@@ -28,13 +34,17 @@ function Login() {
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={handleIdInput}
+          onKeyUp={onBtnActive}
         />
         <input
           type="password"
           placeholder="비밀번호"
           onChange={handlePwInput}
+          onKeyUp={onBtnActive}
         />
-        <button onClick={goToMain}>로그인</button>
+        <button disabled={disabled} onClick={goToMain}>
+          로그인
+        </button>
       </form>
       <p>
         <img src="" alt="" />
@@ -46,3 +56,9 @@ function Login() {
 }
 
 export default Login;
+
+//onClick={goToMain}
+
+// onChange = {
+//
+// }
