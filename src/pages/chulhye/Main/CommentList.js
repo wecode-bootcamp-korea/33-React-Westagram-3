@@ -9,7 +9,7 @@ const CommentList = () => {
 
   const [commentArray, setCommentArray] = useState([]); //댓글 목록
   const onSubmit = e => {
-    e.preventDefalut();
+    e.preventDefault();
     if (comment === '') {
       return;
     }
@@ -22,7 +22,9 @@ const CommentList = () => {
       {/* <ul className="replyBox" /> */}
       <Comment commentArray={commentArray} />
       <div className="replyContainer" onSubmit={onSubmit}>
-        <form>
+        {/* form 태그로 input 과 button을 감싸면 엔터나 버튼 클릭 시, submit으로
+        인식한다. */}
+        <form className="commentWrap">
           <input
             type="text"
             className="mainReply"
