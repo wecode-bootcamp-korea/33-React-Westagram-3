@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.scss';
 
 const Main = () => {
+  const [comment, setComment] = useState('');
+  const [comments, setComments] = useState([]);
+
+  const handleComment = event => setComment(event.target.value);
+  const submitComment = event => {
+    event.preventDefault();
+    if (comment === '') {
+      return;
+    }
+    setComments(currentArray => [comment, ...currentArray]);
+    setComment('');
+  };
+
   return (
     <div className="Main">
       <nav className="navFixed">
@@ -189,15 +202,25 @@ const Main = () => {
               <p className="descPara">
                 <span className="minutes">54</span>분 전
               </p>
-              <ul id="commentList" />
+              <ul id="commentList">
+                {comments.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </div>
-            <form className="comment">
+            <form onSubmit={submitComment} className="comment">
               <input
+                onChange={handleComment}
+                value={comment}
                 className="commentInput"
                 type="text"
                 placeholder="댓글 달기..."
               />
-              <button className="commentBtn" type="submit">
+              <button
+                className="commentBtn"
+                type="submit"
+                disabled={comment.length > 1 ? false : true}
+              >
                 게시
               </button>
             </form>
