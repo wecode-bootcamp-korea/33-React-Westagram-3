@@ -34,7 +34,10 @@ function Main() {
                 <b>wecode_bootcamp</b>
               </span>
               <span className="feedsTopUserName">WeCode - 위코드</span>
-              <button id="feedsTopUpdateButton" class="fa-solid fa-ellipsis" />
+              <button
+                id="feedsTopUpdateButton"
+                className="fa-solid fa-ellipsis"
+              />
             </div>
             <img
               src="/images/seongju/main-img/myphoto.webp"

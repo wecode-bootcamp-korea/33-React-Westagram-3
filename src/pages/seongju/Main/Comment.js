@@ -1,21 +1,21 @@
 import './Comment.scss';
 import React from 'react';
 
-function Comment(props) {
+function Comment({ comment, like, setLike, setComment }) {
   return (
     <>
-      {props.comment.map(function (a, i) {
+      {comment.map(function (a, i) {
         return (
-          <div key="0">
-            <p className="inputComment" key="0">
-              <b>wkddn1359</b> {props.comment[i]}
-              <span className="countLike">👍{props.like[i]}</span>
+          <div key={i}>
+            <p className="inputComment">
+              <b>wkddn1359</b> {comment[i]}
+              <span className="countLike">👍{like[i]}</span>
               <button
                 onClick={e => {
                   e.stopPropagation();
-                  let copy = [...props.like];
+                  let copy = [...like];
                   copy[i] += 1;
-                  props.setLike(copy);
+                  setLike(copy);
                 }}
                 className="commentLike"
               >
@@ -23,9 +23,9 @@ function Comment(props) {
               </button>
               <button
                 onClick={() => {
-                  let copy = [...props.comment];
+                  let copy = [...comment];
                   copy.splice(i, 1);
-                  props.setComment(copy);
+                  setComment(copy);
                 }}
                 className="commentDelete"
               >
