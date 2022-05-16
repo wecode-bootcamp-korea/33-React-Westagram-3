@@ -94,12 +94,18 @@ function Main() {
               />
               <p className="feedsHowManyLikes">
                 <b>AhnSeoung_Ju</b>님 <b>외 4명</b>이 좋아합니다.
-                <Comment
-                  comment={comment}
-                  like={like}
-                  setLike={setLike}
-                  setComment={setComment}
-                />
+                {comment.map(function (a, i) {
+                  return (
+                    <Comment
+                      comment={comment}
+                      like={like}
+                      setLike={setLike}
+                      setComment={setComment}
+                      i={i}
+                      key={i}
+                    />
+                  );
+                })}
               </p>
               <section className="feedsCommentWrapper">
                 <input
