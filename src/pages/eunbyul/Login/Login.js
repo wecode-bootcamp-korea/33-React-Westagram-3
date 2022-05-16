@@ -6,6 +6,7 @@ import './Login.scss';
 const Login = () => {
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
+
   const handleInput = event => setId(event.target.value);
   const handlePassword = event => setPw(event.target.value);
 
@@ -25,7 +26,7 @@ const Login = () => {
                 onChange={handleInput}
                 value={id}
                 className="inputId"
-                type="text"
+                type="email"
                 id="userId"
                 name="username"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -39,7 +40,11 @@ const Login = () => {
                 name="password"
                 placeholder="비밀번호"
               />
-              <button className="loginBtn" onClick={goToMain}>
+              <button
+                className="loginBtn"
+                onClick={goToMain}
+                disabled={id.includes('@') && pw.length >= 5 ? false : true}
+              >
                 로그인
               </button>
             </form>
