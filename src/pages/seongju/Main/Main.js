@@ -2,19 +2,24 @@ import React, { Fragment } from 'react';
 import './Main.scss';
 import Nav from '../../../components/Nav/nav';
 import Comment from './Comment';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Main() {
   let [input, setInput] = useState('');
   let [comment, setComment] = useState([]);
-  let [like, setLike] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
 
   const pushCommnet = () => {
     let copy = [...comment];
-    copy.push(input);
+    copy.push({ name: 'wkddb1359', comment: input });
     setComment(copy);
     setInput('');
   };
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json')
+      .then(res => res.json())
+      .then(data => setComment(data));
+  }, []);
 
   return (
     <Fragment>
@@ -92,21 +97,17 @@ function Main() {
                 className="friendsOne"
                 alt="피드 친구 사진"
               />
-              <p className="feedsHowManyLikes">
+              <div className="feedsHowManyLikes">
                 <b>AhnSeoung_Ju</b>님 <b>외 4명</b>이 좋아합니다.
-                {comment.map(function (a, i) {
-                  return (
-                    <Comment
-                      comment={comment}
-                      like={like}
-                      setLike={setLike}
-                      setComment={setComment}
-                      i={i}
-                      key={i}
-                    />
-                  );
-                })}
-              </p>
+                {comment.map(commentData => (
+                  <Comment
+                    commentData={commentData}
+                    key={commentData.id}
+                    comment={comment}
+                    setComment={setComment}
+                  />
+                ))}
+              </div>
               <section className="feedsCommentWrapper">
                 <input
                   onChange={e => {
