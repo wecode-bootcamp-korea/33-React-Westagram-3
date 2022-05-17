@@ -308,8 +308,6 @@ $paraColor: rgb(135, 135, 135);
 
   #commentList {
     li {
-      @include flexSpaceBetween;
-
       span:first-child {
         font-weight: bold;
       }
