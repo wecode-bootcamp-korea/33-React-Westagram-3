@@ -99,7 +99,6 @@ button:focus {
 .mainContainer {
   display: flex;
   justify-content: center;
-  height: 100vh;
   background-color: #fafafa;
 
   .mainSection {
@@ -114,6 +113,10 @@ button:focus {
   height: auto;
   margin-right: 28px;
   padding: 60px 12px;
+
+  article {
+    margin-bottom: 25px;
+  }
 
   .feedHeader {
     display: flex;

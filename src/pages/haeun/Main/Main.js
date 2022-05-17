@@ -1,30 +1,35 @@
 import React, { useState, useEffect } from 'react';
 
-import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
-import Comment from './Comment/Comment';
+// import Comment from './Comment/Comment';
+import Story from './Story/Story';
+import Recommendation from './Recommendation/Recommendation';
+import Feed from './Feed/Feed';
+
+import './Main.scss';
 
 function Main() {
-  const [comment, setComment] = useState('');
-  const [commentList, setCommentList] = useState([]);
-
-  const handleSaveComment = e => {
-    e.preventDefault();
-    setComment(e.target.value);
+  const [storyList, setStoryList] = useState([]);
+  const [recommendationList, setRecommendationList] = useState([]);
+  const fetchStoryData = () => {
+    fetch('/data/haeunStoryData.json')
+      .then(res => res.json())
+      .then(data => {
+        setStoryList(data);
+      });
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    setCommentList([...commentList, { name: 'nueahooy', text: comment }]);
-    setComment('');
+  const fetchRcmndData = () => {
+    fetch('/data/haeunRcmndData.json')
+      .then(res => res.json())
+      .then(data => {
+        setRecommendationList(data);
+      });
   };
 
   useEffect(() => {
-    fetch('/data/haeunData.json')
-      .then(res => res.json())
-      .then(data => {
-        setCommentList(data);
-      });
+    fetchStoryData();
+    fetchRcmndData();
   }, []);
 
   return (
@@ -34,69 +39,9 @@ function Main() {
       <main className="mainContainer">
         <section className="mainSection">
           <div className="feeds">
-            <article>
-              <div className="feedHeader">
-                <div className="user">
-                  <img
-                    className="userImg"
-                    src="images/haeun/main-img/user1.jpg"
-                    alt=""
-                  />
-                  <span className="userId">nueahooy</span>
-                </div>
-              </div>
-              <div className="feedImg" />
-              <div className="feedBottom">
-                <div className="iconBox">
-                  <div className="iconLeft">
-                    <button className="heartImg">
-                      <img src="images/haeun/main-img/heart.png" alt="" />
-                    </button>
-                    <button className="commentImg">
-                      <img src="images/haeun/main-img/comment.png" alt="" />
-                    </button>
-                    <button className="shareImg">
-                      <img src="images/haeun/main-img/share.png" alt="" />
-                    </button>
-                  </div>
-                  <div className="iconRight">
-                    <button className="shaveImg">
-                      <img src="images/haeun/main-img/shave.png" alt="" />
-                    </button>
-                  </div>
-                </div>
-                <div className="likes">
-                  <img src="images/haeun/main-img/user2.jpg" alt="" />
-                  <span>
-                    <strong>hyunsunhye</strong>님<strong> 외 10명</strong>이
-                    좋아합니다
-                  </span>
-                </div>
-                <div className="feedText">
-                  <strong>nueahooy</strong>
-                  <span>🍫</span>
-                </div>
-                <div className="commentBox">
-                  <p className="commentTime">42분 전</p>
-                  <ul className="commentList">
-                    {commentList.map(comment => {
-                      return <Comment key={comment.id} comment={comment} />;
-                    })}
-                  </ul>
-                </div>
-              </div>
-              <form className="commentInput">
-                <input
-                  type="text"
-                  placeholder="댓글 달기..."
-                  value={comment}
-                  onChange={e => handleSaveComment(e)}
-                />
-                <button className="commentBtn" onClick={e => handleSubmit(e)}>
-                  게시
-                </button>
-              </form>
-            </article>
+            <Feed />
+
+            <Feed />
           </div>
 
           <aside className="mainRight">
@@ -114,34 +59,9 @@ function Main() {
                 <span>모두 보기</span>
               </div>
               <ul>
-                <li className="storyList">
-                  <img src="images/haeun/main-img/user2.jpg" alt="" />
-                  <div className="userInfo">
-                    <span>haeun_</span>
-                    <span>16분 전</span>
-                  </div>
-                </li>
-                <li className="storyList">
-                  <img src="images/haeun/main-img/user2.jpg" alt="" />
-                  <div className="userInfo">
-                    <span>kimwon.pil</span>
-                    <span>58분 전</span>
-                  </div>
-                </li>
-                <li className="storyList">
-                  <img src="images/haeun/main-img/user2.jpg" alt="" />
-                  <div className="userInfo">
-                    <span>52nd-day</span>
-                    <span>1시간 전</span>
-                  </div>
-                </li>
-                <li className="storyList">
-                  <img src="images/haeun/main-img/user2.jpg" alt="" />
-                  <div className="userInfo">
-                    <span>hyunsunhye</span>
-                    <span>2시간 전</span>
-                  </div>
-                </li>
+                {storyList.map(storyItem => {
+                  return <Story key={storyItem.id} story={storyItem} />;
+                })}
               </ul>
             </div>
 
@@ -151,36 +71,14 @@ function Main() {
                 <span>모두 보기</span>
               </div>
               <ul>
-                <li className="rcmndList">
-                  <div className="account">
-                    <img src="images/haeun/main-img/user2.jpg" alt="" />
-                    <div className="accountId">
-                      <strong>spring</strong>
-                      <span>areyouberry님 외 2명이 ...</span>
-                    </div>
-                  </div>
-                  <button>팔로우</button>
-                </li>
-                <li className="rcmndList">
-                  <div className="account">
-                    <img src="images/haeun/main-img/user2.jpg" alt="" />
-                    <div className="accountId">
-                      <strong>summer</strong>
-                      <span>areyouberry님 외 2명이 ...</span>
-                    </div>
-                  </div>
-                  <button>팔로우</button>
-                </li>
-                <li className="rcmndList">
-                  <div className="account">
-                    <img src="images/haeun/main-img/user2.jpg" alt="" />
-                    <div className="accountId">
-                      <strong>winter</strong>
-                      <span>areyouberry님 외 2명이 ...</span>
-                    </div>
-                  </div>
-                  <button>팔로우</button>
-                </li>
+                {recommendationList.map(recommendationItem => {
+                  return (
+                    <Recommendation
+                      key={recommendationItem.id}
+                      recommendationItem={recommendationItem}
+                    />
+                  );
+                })}
               </ul>
             </div>
 
