@@ -3,15 +3,28 @@ import Nav from '../../../components/Nav/Nav';
 import { Component, useState } from 'react';
 import Comment from './component/Comment';
 function Main() {
-  const [comment, setComment] = useState(['']); //댓글 입력부분(배열)
-  const [inputValue, setInputValue] = useState(''); //입력한댓글
+  const [comment, setComment] = useState([]);
+  const [inputValue, setInputValue] = useState('');
 
   const post = e => {
     e.preventDefault();
     let copy = [...comment];
     copy.push(inputValue);
     setComment(copy);
+    setInputValue('');
   };
+
+  // 2
+  // 1. comment user nickname
+  // comment component, props -> comment
+  // comment prop Array.map => <p>user</p>
+  // comment jsx
+  // nickname
+  // comment state string[]
+  // 1. state
+  // 2. nickname hardcoding
+
+  // 2. comment post, input clear
 
   return (
     <div className="mainContents">
@@ -84,7 +97,7 @@ function Main() {
                   <span>넘나 귀여운것</span>
                 </div>
                 <span />
-                <Comment comment={comment} />
+                <Comment comments={comment} />
               </div>
               <ul id="toDoList">
                 <li />
@@ -98,6 +111,7 @@ function Main() {
                   className="toDoInput"
                   type="text"
                   placeholder="댓글 입력..."
+                  value={inputValue}
                   required
                 />
                 <button
