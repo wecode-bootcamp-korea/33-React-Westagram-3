@@ -1,6 +1,18 @@
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
+import { Component, useState } from 'react';
+import Comment from './component/Comment';
 function Main() {
+  const [comment, setComment] = useState(['']); //댓글 입력부분(배열)
+  const [inputValue, setInputValue] = useState(''); //입력한댓글
+
+  const post = e => {
+    e.preventDefault();
+    let copy = [...comment];
+    copy.push(inputValue);
+    setComment(copy);
+  };
+
   return (
     <div className="mainContents">
       <Nav />
@@ -71,6 +83,8 @@ function Main() {
                   <b>follower2</b>
                   <span>넘나 귀여운것</span>
                 </div>
+                <span />
+                <Comment comment={comment} />
               </div>
               <ul id="toDoList">
                 <li />
@@ -78,11 +92,22 @@ function Main() {
 
               <form id="toDoForm">
                 <input
+                  onChange={e => {
+                    setInputValue(e.target.value);
+                  }}
                   className="toDoInput"
                   type="text"
-                  placeholder="Write a To do and Press Enter"
+                  placeholder="댓글 입력..."
                   required
                 />
+                <button
+                  className="inputButton"
+                  onClick={e => {
+                    post(e);
+                  }}
+                >
+                  게시
+                </button>
               </form>
             </div>
           </div>
