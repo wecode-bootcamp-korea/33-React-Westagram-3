@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.scss';
+import Comment from './Comment';
 
 const Main = () => {
   const [comment, setComment] = useState('');
@@ -204,7 +205,12 @@ const Main = () => {
               </p>
               <ul id="commentList">
                 {comments.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <Comment
+                    item={item}
+                    key={comment.id}
+                    value={comment}
+                    comments={comments}
+                  />
                 ))}
               </ul>
             </div>
