@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
@@ -6,9 +6,7 @@ import Comment from './Comment/Comment';
 
 function Main() {
   const [comment, setComment] = useState('');
-  const [commentList, setCommentList] = useState([
-    { id: 'd.ddablue', text: '우와 초콜렛이다' },
-  ]);
+  const [commentList, setCommentList] = useState([]);
 
   const handleSaveComment = e => {
     e.preventDefault();
@@ -17,9 +15,17 @@ function Main() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    setCommentList([...commentList, { id: 'nueahooy', text: comment }]);
+    setCommentList([...commentList, { name: 'nueahooy', text: comment }]);
     setComment('');
   };
+
+  useEffect(() => {
+    fetch('/data/haeunData.json')
+      .then(res => res.json())
+      .then(data => {
+        setCommentList(data);
+      });
+  }, []);
 
   return (
     <div className="main">
@@ -73,8 +79,8 @@ function Main() {
                 <div className="commentBox">
                   <p className="commentTime">42분 전</p>
                   <ul className="commentList">
-                    {commentList.map((comment, idx) => {
-                      return <Comment key={idx} comment={comment} />;
+                    {commentList.map(comment => {
+                      return <Comment key={comment.id} comment={comment} />;
                     })}
                   </ul>
                 </div>

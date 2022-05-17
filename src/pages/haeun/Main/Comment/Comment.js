@@ -3,7 +3,7 @@ import React from 'react';
 const Comment = ({ comment }) => {
   return (
     <li>
-      <strong>{comment.id}</strong>
+      <strong>{comment.name}</strong>
       <div className="commentText">
         <span>{comment.text}</span>
         <button>ⅹ</button>
