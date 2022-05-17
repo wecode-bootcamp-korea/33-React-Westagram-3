@@ -1,8 +1,8 @@
 import React from 'react';
 import './Comment.scss';
 
-const Comment = props => {
-  return <li key={props.index}>{props.item}</li>;
-};
+function Comment({ index, item }) {
+  return <li key={index}>{item}</li>;
+}
 
 export default Comment;

@@ -13,7 +13,7 @@ const Main = () => {
     if (comment === '') {
       return;
     }
-    setComments(currentArray => [comment, ...currentArray]);
+    setComments(currentArray => [...currentArray, comment]);
     setComment('');
   };
 
@@ -210,6 +210,7 @@ const Main = () => {
                     key={comment.id}
                     value={comment}
                     comments={comments}
+                    index={index}
                   />
                 ))}
               </ul>
