@@ -6,6 +6,21 @@ import { useState } from 'react';
 const LoginActivate = () => {
   const navigate = useNavigate();
   const goToMain = () => {
+    fetch('http://10.58.3.156:8000/user/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        user_email: idInput,
+        password: pwdInput,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log('결과: ', result);
+        if (result.Token) {
+          localStorage.setItem('token', result.Token);
+        }
+      });
+
     navigate('/main-chulhye');
   };
   const [idInput, setIdInput] = useState('');
