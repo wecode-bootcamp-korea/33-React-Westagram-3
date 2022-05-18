@@ -11,6 +11,8 @@ import './Main.scss';
 function Main() {
   const [storyList, setStoryList] = useState([]);
   const [recommendationList, setRecommendationList] = useState([]);
+  const [feedList, setFeedList] = useState([]);
+
   const fetchStoryData = () => {
     fetch('/data/haeunStoryData.json')
       .then(res => res.json())
@@ -27,9 +29,18 @@ function Main() {
       });
   };
 
+  const fetchFeedData = () => {
+    fetch('/data/feed.json')
+      .then(res => res.json())
+      .then(data => {
+        setFeedList(data);
+      });
+  };
+
   useEffect(() => {
     fetchStoryData();
     fetchRcmndData();
+    fetchFeedData();
   }, []);
 
   return (
@@ -39,9 +50,9 @@ function Main() {
       <main className="mainContainer">
         <section className="mainSection">
           <div className="feeds">
-            <Feed />
-
-            <Feed />
+            {feedList.map(FeedItem => {
+              return <Feed key={FeedItem.id} feedItem={FeedItem} />;
+            })}
           </div>
 
           <aside className="mainRight">

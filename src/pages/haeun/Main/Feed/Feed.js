@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import Comment from '../Comment/Comment';
 
-const Feed = () => {
+const Feed = ({ feedItem }) => {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
-
-  console.log(commentList);
 
   const handleSaveComment = e => {
     e.preventDefault();
@@ -34,15 +32,11 @@ const Feed = () => {
     <article>
       <div className="feedHeader">
         <div className="user">
-          <img
-            className="userImg"
-            src="images/haeun/main-img/user1.jpg"
-            alt=""
-          />
-          <span className="userId">nueahooy</span>
+          <img className="userImg" src={feedItem.accountImg} alt="" />
+          <span className="userId">{feedItem.accountName}</span>
         </div>
       </div>
-      <div className="feedImg" />
+      <img className="feedImg" src={feedItem.feedImg} alt="" />
       <div className="feedBottom">
         <div className="iconBox">
           <div className="iconLeft">
@@ -63,17 +57,18 @@ const Feed = () => {
           </div>
         </div>
         <div className="likes">
-          <img src="images/haeun/main-img/user2.jpg" alt="" />
+          <img src={feedItem.followerImg} alt="" />
           <span>
-            <strong>hyunsunhye</strong>님<strong> 외 10명</strong>이 좋아합니다
+            <strong>{feedItem.followerName}</strong>님
+            <strong> 외 {feedItem.like}명</strong>이 좋아합니다
           </span>
         </div>
         <div className="feedText">
-          <strong>nueahooy</strong>
-          <span>🍫</span>
+          <strong>{feedItem.accountName}</strong>
+          <span>{feedItem.text}</span>
         </div>
         <div className="commentBox">
-          <p className="commentTime">42분 전</p>
+          <p className="commentTime">{feedItem.createdAt}</p>
           <ul className="commentList">
             {commentList.map(comment => {
               return <Comment key={comment.id} comment={comment} />;

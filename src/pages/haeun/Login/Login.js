@@ -8,9 +8,44 @@ function Login() {
   const [disabled, setdisabled] = useState(true);
   const navigate = useNavigate();
 
+  const goToSignUp = () => {
+    navigate('/Signup-haeun');
+  };
+
   const goToMain = () => {
     navigate('/main-haeun');
+    fetch('http://10.58.3.39:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idInput,
+        password: pwInput,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
   };
+
+  // const goToMain = () => {
+  //   navigate('/main-haeun');
+  //   fetch('http://10.58.3.39:8000/users/login', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: idInput,
+  //       password: pwInput,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       if (result.TOKEN) {
+  //         localStorage.setItem('token', result.TOKEN);
+  //         navigate('/main-haeun');
+  //       }
+  //     });
+  // };
+
+  // const signup = () => {
+  //   navigate('/main-haeun');
+  // };
 
   const handleIdInput = e => {
     setIdInput(e.target.value);
@@ -45,6 +80,7 @@ function Login() {
         <button disabled={disabled} onClick={goToMain}>
           로그인
         </button>
+        <button onClick={goToSignUp}>회원가입</button>
       </form>
       <p>
         <img src="" alt="" />

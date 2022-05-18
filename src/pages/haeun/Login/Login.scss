@@ -81,6 +81,14 @@
       &:enabled {
         background-color: #0095f6;
       }
+
+      &:last-child {
+        margin-bottom: 10px;
+        width: 100px;
+        color: #0095f6;
+        background-color: inherit;
+        border: none;
+      }
     }
   }
 
