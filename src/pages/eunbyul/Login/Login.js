@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
@@ -13,6 +12,15 @@ const Login = () => {
   const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main-eunbyul');
+    fetch('http://10.58.3.119:8000/users/signin', {
+      method: 'post',
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(json => console.log(json));
   };
 
   return (

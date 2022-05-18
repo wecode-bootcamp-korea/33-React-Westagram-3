@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.scss';
 import Comment from './Comment';
@@ -6,6 +6,13 @@ import Comment from './Comment';
 const Main = () => {
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([]);
+
+  // Mock Data 가져오기
+  useEffect(() => {
+    fetch('data/eunbyulData.json')
+      .then(response => response.json()) //response.json(): 백앤드로부터 받아오는 데이터; 자바스크립트를 객체로 바꿔준다.
+      .then(json => setComments(json));
+  }, []);
 
   const handleComment = event => setComment(event.target.value);
   const submitComment = event => {
@@ -204,7 +211,16 @@ const Main = () => {
                 <span className="minutes">54</span>분 전
               </p>
               <ul id="commentList">
-                {comments.map((item, index) => (
+                {comments.map(list => {
+                  return (
+                    <Comment
+                      key={list.id}
+                      name={list.userName}
+                      text={list.text}
+                    />
+                  );
+                })}
+                {/* {comments.map((item, index) => (
                   <Comment
                     item={item}
                     key={comment.id}
@@ -212,7 +228,7 @@ const Main = () => {
                     comments={comments}
                     index={index}
                   />
-                ))}
+                ))} */}
               </ul>
             </div>
             <form onSubmit={submitComment} className="comment">
