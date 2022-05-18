@@ -9,7 +9,21 @@ function Login() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate('/main-seongju');
+    fetch('http://10.58.4.207:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: Id,
+        password: Pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(response => {
+        if (response.access_token) {
+          localStorage.setItem('login-token', response.access_token);
+          navigate('/main-seongju');
+        }
+      })
+      .then(result => console.log('결과: ', result));
   };
 
   const handleIdInput = event => {

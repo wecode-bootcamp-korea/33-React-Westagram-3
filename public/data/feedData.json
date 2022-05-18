@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "profileSrc": "/images/seongju/main-img/myphoto.webp",
+    "prdfileId": "Super_Man - 슈퍼맨",
+    "feedScript": "님 외 4명이 좋아합니다. "
+  },
+  {
+    "id": 2,
+    "profileSrc": "/images/seongju/main-img/friends_4.webp ",
+    "prdfileId": "Good_girl - 굿걸",
+    "feedScript": "님 외 10명이 좋아합니다."
+  },
+  {
+    "id": 3,
+    "profileSrc": "/images/seongju/main-img/friends_3.webp",
+    "prdfileId": "westagram - 그만",
+    "feedScript": "님 외 2000명이 좋아합니다."
+  }
+]

@@ -1,19 +1,20 @@
 import './Comment.scss';
 import React from 'react';
 
-function Comment({ commentData, comment, setComment }) {
+function Comment({ feedComment, setComment, userComment, id }) {
   return (
     <div className="inputComment">
-      <b>{commentData.name}</b> <span>{commentData.comment}</span>
-      <span className="countLike">👍</span>
-      <button className="commentLike">👍</button>
+      <b>wkddn1359</b> <span>{userComment}</span>
+      <button className="commentLike" style={{ backgroundColor: 'red' }}>
+        🤍
+      </button>
       <button
-        className="commentDelete"
         onClick={() => {
-          let copy = [...comment];
-          copy.pop();
+          const copy = [...feedComment];
+          copy.splice(id, 1);
           setComment(copy);
         }}
+        className="commentDelete"
       >
         ❌
       </button>
