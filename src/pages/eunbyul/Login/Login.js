@@ -23,6 +23,10 @@ const Login = () => {
       .then(data => localStorage.setItem('token', data.ACCESS_TOKEN));
   };
 
+  // Storing access token received from the server to localStorage and then showing it in the console.
+  // const userToken = localStorage.getItem('token');
+  // console.log(userToken);
+
   return (
     <div className="Login">
       <section className="section">
