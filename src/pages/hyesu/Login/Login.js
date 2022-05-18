@@ -16,6 +16,44 @@ const Login = () => {
     setInputPw(e.target.value);
   };
 
+  const navigate = useNavigate();
+  const goToMain = e => {
+    e.preventDefault();
+
+    // fetch('http://10.58.4.219:8000/users/signin', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: inputId,
+    //     password: inputPw,
+    //   }),
+    // })
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     if (result.ACCESS_TOKEN) {
+    //       console.log(result.ACCESS_TOKEN);
+    //       localStorage.setItem('ACCESS_TOKEN', result.ACCESS_TOKEN);
+    //     } else {
+    //       alert('로그인 실패!');
+    //     }
+    //   });
+    fetch('http://10.58.4.219:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: inputId,
+        password: inputPw,
+        name: 'hyesu',
+        mobile_number: '010-4816-4270',
+        date_of_birth: '2022-05-18',
+      }),
+    })
+      .then(res => res.json())
+      .then(result => {
+        console.log('결과', result);
+      });
+
+    navigate('/main-hyesu');
+  };
+
   //삼항연산자를 이용해서 로그인버튼 활성화 조건을 생성
   const disable = inputId.includes('@') && inputPw.length >= 5 ? true : false;
 
@@ -40,11 +78,14 @@ const Login = () => {
           />
         </form>
 
-        <Link to="/main-hyesu">
-          <button type="button" className="loginBtn" disabled={!disable}>
-            로그인
-          </button>
-        </Link>
+        <button
+          onClick={goToMain}
+          type="button"
+          className="loginBtn"
+          disabled={!disable}
+        >
+          로그인
+        </button>
 
         <div className="links">비밀번호를 잊어버리셨나요?</div>
       </div>

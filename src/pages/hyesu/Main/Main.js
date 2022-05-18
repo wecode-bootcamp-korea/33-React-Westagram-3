@@ -1,16 +1,47 @@
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
-import { Component, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Comment from './component/Comment';
+
 function Main() {
+  //목데이터 가져오기
+  //fetch('api 주소',{'정보 객체'})
+  //then의 res, data는 우리가 받아오는 값을 표현하는 그냥 변수
+  //fetch(요청)->date를 받아옴.변환을 해줘야함. 그게 첫 번째 then
+  //두 번째 then에서는 변환된 data를 변수로 가져와서 앞으로 활용을할거다~는 역할
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET', //정보 객체 부분
+    })
+      .then(res => res.json()) //백엔드로부터 받아온 데이터 덩어리를 자바스크립트 객체로 바꿔줌
+      .then(data => {
+        setComment(data); //데이터 저장
+      });
+  }, []);
   const [comment, setComment] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
+  const nextId = useRef(3); //기존 데이터에 다음 번호로  id 지정
+
+  const onInsert = text => {
+    const newComment = {
+      id: nextId.current, //useRef(3)을 받아옴
+      name: 'followers',
+      text, //인자를 표시
+    };
+    if (text.length !== 0) {
+      // input이 빈칸이 아니면
+      setComment(comment.concat(newComment)); // 댓글 추가되는 부분을 기존 배열과 합쳐서 반환
+      nextId.current += 1; //id 증가
+    }
+  };
+  //엔터나 버튼을눌렀을 때 onInsert 실행하는 함수
   const post = e => {
     e.preventDefault();
-    let copy = [...comment];
-    copy.push(inputValue);
-    setComment(copy);
+    // let copy = [...comment];
+    // copy.push(inputValue);
+    // setComment(copy);
+    onInsert(inputValue);
     setInputValue('');
   };
 
@@ -103,9 +134,10 @@ function Main() {
                 <li />
               </ul>
 
-              <form id="toDoForm">
+              <form id="toDoForm" onSubmit={post}>
                 <input
                   onChange={e => {
+                    //onChange는 input창에 글씨 쓸때 바뀌는 거
                     setInputValue(e.target.value);
                   }}
                   className="toDoInput"
@@ -116,9 +148,10 @@ function Main() {
                 />
                 <button
                   className="inputButton"
-                  onClick={e => {
-                    post(e);
-                  }}
+                  // onClick={e => {
+                  //   post(e);
+                  // }}
+                  type="submit"
                 >
                   게시
                 </button>
@@ -171,4 +204,5 @@ function Main() {
     </div>
   );
 }
+
 export default Main;

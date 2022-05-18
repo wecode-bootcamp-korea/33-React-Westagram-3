@@ -3,11 +3,12 @@ import React from 'react';
 const Comment = props => {
   return (
     <div>
-      {props.comments.map((comment, idx) => {
+      {props.comments.map(comment => {
+        // console.log('찍혀라', comment);
         return (
-          <div key={comment} className="userDesc">
-            <b>follower3</b>
-            <span>{comment}</span>
+          <div key={comment.id} className="userDesc">
+            <b>followers</b>
+            <span>{comment.text}</span>
           </div>
         );
       })}
