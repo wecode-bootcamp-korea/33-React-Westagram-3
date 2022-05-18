@@ -12,6 +12,7 @@ import MainHyesu from './pages/hyesu/Main/Main';
 // haeun's component
 import LoginHaeun from './pages/haeun/Login/Login';
 import MainHaeun from './pages/haeun/Main/Main';
+import SignUpHaeun from './pages/haeun/SignUp/SignUp';
 
 // eunbyul's compornent
 import LoginEunbyul from './pages/eunbyul/Login/Login';
@@ -31,6 +32,7 @@ const Router = () => {
         <Route path="/main-hyesu" element={<MainHyesu />} />
         <Route path="/login-haeun" element={<LoginHaeun />} />
         <Route path="/main-haeun" element={<MainHaeun />} />
+        <Route path="/Signup-haeun" element={<SignUpHaeun />} />
         <Route path="/login-eunbyul" element={<LoginEunbyul />} />
         <Route path="/main-eunbyul" element={<MainEunbyul />} />
         <Route path="/login-seongju" element={<LoginSeongju />} />

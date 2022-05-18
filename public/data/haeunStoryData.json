@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "profileImg": "https://velog.velcdn.com/images/yoohaeun/post/62b6ddf7-8ec8-4ac2-9318-e82f2ff42c69/image.jpg",
+    "accountName": "haeun_",
+    "time": "16분 전"
+  },
+  {
+    "id": 2,
+    "profileImg": "https://velog.velcdn.com/images/yoohaeun/post/697336d3-7997-458a-93c2-fe9e0b239488/image.jpg",
+    "accountName": "kimwon.pil",
+    "time": "58분 전"
+  },
+  {
+    "id": 3,
+    "profileImg": "https://velog.velcdn.com/images/yoohaeun/post/7573dfd6-55d8-482c-98eb-018e85784c74/image.jpg",
+    "accountName": "hyunsunhye",
+    "time": "2시간 전"
+  },
+  {
+    "id": 4,
+    "profileImg": "https://velog.velcdn.com/images/yoohaeun/post/b9a68463-5947-47ca-8131-5a8b79e9d782/image.JPG",
+    "accountName": "areyooberry",
+    "time": "2시간 전"
+  }
+]

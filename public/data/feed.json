@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "accountImg": "https://velog.velcdn.com/images/yoohaeun/post/1902a7b1-cc74-4c98-857b-cce56c804834/image.jpg",
+    "accountName": "nueahooy",
+    "feedImg": "https://velog.velcdn.com/images/yoohaeun/post/01d2f989-566d-4bcc-9079-79b139ae61ed/image.JPG",
+    "text": "🍫",
+    "followerImg": "https://velog.velcdn.com/images/yoohaeun/post/7573dfd6-55d8-482c-98eb-018e85784c74/image.jpg",
+    "followerName": "hyunsunhye",
+    "like": 10,
+    "createdAt": "2월 21일"
+  },
+  {
+    "id": 2,
+    "accountImg": "https://velog.velcdn.com/images/yoohaeun/post/d6932e78-9e75-402e-a8e2-92dda4a942e2/image.jpg",
+    "accountName": "52nd_day",
+    "feedImg": "https://velog.velcdn.com/images/yoohaeun/post/7e095a6e-6580-4cf5-a167-0899e31209f2/image.jpg",
+    "text": "🤍",
+    "followerImg": "https://velog.velcdn.com/images/yoohaeun/post/62b6ddf7-8ec8-4ac2-9318-e82f2ff42c69/image.jpg",
+    "followerName": "haeun_",
+    "like": 21,
+    "createdAt": "12월 25일"
+  }
+]

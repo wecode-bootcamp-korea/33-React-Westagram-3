@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "profileImg": "https://velog.velcdn.com/images/yoohaeun/post/3d1a4718-3e38-4e1b-afcd-23cf15606cac/image.jpg",
+    "accountName": "spring",
+    "followedBy": "areyooberry님 외 2명이 ..."
+  },
+  {
+    "id": 2,
+    "profileImg": "https://velog.velcdn.com/images/yoohaeun/post/3d1a4718-3e38-4e1b-afcd-23cf15606cac/image.jpg",
+    "accountName": "summer",
+    "followedBy": "hyunsunhye님 외 1명이 ..."
+  },
+  {
+    "id": 3,
+    "profileImg": "https://velog.velcdn.com/images/yoohaeun/post/3d1a4718-3e38-4e1b-afcd-23cf15606cac/image.jpg",
+    "accountName": "winter",
+    "followedBy": "snow님 외 3명이 ..."
+  }
+]
