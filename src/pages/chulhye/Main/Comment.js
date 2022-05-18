@@ -1,19 +1,15 @@
 import React from 'react';
 import '../Main/Main.scss';
 
-function Comment({ commentArray }) {
-  let commentList = commentArray;
+function Comment({ comment, onDelete }) {
   return (
-    <ul className="replyBox">
-      {commentList.map((value, id) => (
-        <li key={id} className="commentList">
-          <span className="commentText id">alrbnb</span>
-          <span className="commentText value">{value}</span>
-          <button className="replyDel">x</button>
-        </li>
-      ))}
-    </ul>
+    <li className="commentList">
+      <span className="commentText id">alrbnb</span>
+      <span className="commentText value">{commentArray}</span>
+      <button onClick={onDelete} className="replyDel">
+        x
+      </button>
+    </li>
   );
 }
-
 export default Comment;
