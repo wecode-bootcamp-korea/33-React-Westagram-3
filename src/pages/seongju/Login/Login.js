@@ -22,8 +22,7 @@ function Login() {
           localStorage.setItem('login-token', response.access_token);
           navigate('/main-seongju');
         }
-      })
-      .then(result => console.log('결과: ', result));
+      });
   };
 
   const handleIdInput = event => {

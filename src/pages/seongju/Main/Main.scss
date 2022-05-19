@@ -5,7 +5,8 @@ $border-style: 1px solid #e6e6e6;
 /* main page section */
 main {
   height: 114vh;
-
+  display: flex;
+  flex-direction: column;
   /* feeds section */
   .feeds {
     height: 150vh;
