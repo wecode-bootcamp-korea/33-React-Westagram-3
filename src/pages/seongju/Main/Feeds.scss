@@ -1,0 +1,140 @@
+.feeds {
+  height: 150vh;
+  width: 850px;
+  margin-left: 15%;
+  position: relative;
+  margin-top: 5.7%;
+
+  article {
+    border: 1px solid #e6e6e6;
+    height: 120vh;
+    width: 780px;
+    position: relative;
+    left: 4%;
+    top: -4.3%;
+
+    .feedsTop {
+      height: 60px;
+      margin-bottom: 10px;
+
+      .feedsTopUserIcon {
+        border-radius: 50%;
+        position: absolute;
+        left: 3%;
+        top: 0.5%;
+        object-fit: cover;
+      }
+
+      .feedsTopUserId,
+      .feedsTopUserName {
+        position: absolute;
+        left: 11%;
+        top: 0.7%;
+      }
+
+      .feedsTopUserName {
+        top: 2.4%;
+      }
+
+      #feedsTopUpdateButton {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px;
+        cursor: pointer;
+        position: absolute;
+        right: 2%;
+        top: 1%;
+      }
+    }
+
+    .feedsUserImage {
+      position: absolute;
+      top: 6%;
+      object-fit: cover;
+    }
+
+    .feedsMiddle {
+      position: absolute;
+      left: 3%;
+      display: flex;
+      justify-content: space-between;
+      width: 720px;
+      top: 63%;
+
+      .feedsMiddleIconComment,
+      .feedsMiddleIconShare {
+        margin-left: 20px;
+      }
+    }
+
+    .feedsLikeWrapper {
+      position: absolute;
+      top: 67.5%;
+      left: 3%;
+      width: 720px;
+      height: 400px;
+
+      .feedsCommentWrapper {
+        position: relative;
+        top: 70%;
+        left: -3.3%;
+
+        .feedsCommentInput {
+          position: absolute;
+          top: 85%;
+          left: 1%;
+          width: 765px;
+          height: 70px;
+          font-size: 17px;
+          border: 1px solid #e6e6e6;
+        }
+
+        .feedsCommentButton {
+          position: absolute;
+          margin-top: 3%;
+          left: 99%;
+          opacity: 1;
+          width: 50px;
+        }
+      }
+
+      .friendsOne {
+        position: absolute;
+        border-radius: 50%;
+        object-fit: cover;
+        left: -0.5%;
+      }
+
+      .feedsHowManyLikes {
+        position: absolute;
+        top: 4%;
+        left: 8%;
+      }
+
+      .feedsCommentWrapper {
+        position: relative;
+        top: 70%;
+        left: -3.3%;
+
+        .feedsCommentInput {
+          position: absolute;
+          top: 85%;
+          left: 1%;
+          width: 765px;
+          height: 70px;
+          font-size: 17px;
+          border: 1px solid #e6e6e6;
+        }
+
+        .feedsCommentButton {
+          position: absolute;
+          margin-top: 3%;
+          left: 99%;
+          opacity: 1;
+          width: 50px;
+        }
+      }
+    }
+  }
+}
