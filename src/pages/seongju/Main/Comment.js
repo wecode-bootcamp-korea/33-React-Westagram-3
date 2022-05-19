@@ -1,5 +1,5 @@
-import './Comment.scss';
 import React, { useState } from 'react';
+import './Comment.scss';
 import heartImg from '../../../assets/images/commentHeart.png';
 import emptyHeartImg from '../../../assets/images/commentEmptyHeart.png';
 
@@ -8,25 +8,25 @@ function Comment({ feedComment, setComment, userComment, id }) {
   const toggleLike = () => {
     setHeartLike(!heartLike);
   };
+  const deleteComment = () => {
+    const copy = [...feedComment];
+    copy.splice(id, 1);
+    setComment(copy);
+  };
   return (
     <div className="inputComment">
-      <b>wkddn1359</b> <span>{userComment}</span>
+      <span>
+        <b>wkddn1359</b> {userComment}
+      </span>
       <button className="commentLike" onClick={toggleLike}>
         <img
           src={heartLike ? heartImg : emptyHeartImg}
-          alt="하이"
+          alt="heartImg"
           className="heartLike"
           width={18}
         />
       </button>
-      <button
-        onClick={() => {
-          const copy = [...feedComment];
-          copy.splice(id, 1);
-          setComment(copy);
-        }}
-        className="commentDelete"
-      >
+      <button onClick={deleteComment} className="commentDelete">
         ❌
       </button>
     </div>

@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import './Main.scss';
 import Nav from '../../../components/Nav/nav';
 import Feeds from './Feeds';
+import './Main.scss';
 import { useState, useEffect } from 'react';
 
 function Main() {
-  let [feed, setFeed] = useState([]);
+  const [feed, setFeed] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3000/data/feedData.json')
@@ -14,16 +14,15 @@ function Main() {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <Nav />
       <main>
-        {feed.map(f => (
+        {feed.map(feed => (
           <Feeds
-            key={f.id}
-            profileSrc={f.profileSrc}
-            prdfileId={f.prdfileId}
-            imgSrc={f.imgSrc}
-            feedScript={f.feedScript}
+            key={feed.id}
+            profileSrc={feed.profileSrc}
+            prdfileId={feed.prdfileId}
+            feedScript={feed.feedScript}
           />
         ))}
 
@@ -164,7 +163,7 @@ function Main() {
           </a>
         </div>
       </main>
-    </Fragment>
+    </>
   );
 }
 

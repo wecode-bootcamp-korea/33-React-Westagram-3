@@ -6,17 +6,20 @@
   align-items: center;
   justify-content: center;
   height: 90vh;
+
   .loginWrapper {
     width: 37.5em;
     height: 50em;
     border: 0.13em solid #e6e6e6;
     text-align: center;
+
     .loginTitle {
       margin-top: 7%;
       font-family: 'Lobster', cursive;
       font-size: 5.625em;
       margin-bottom: 15%;
     }
+
     input {
       display: block;
       width: 25em;
@@ -30,6 +33,7 @@
       font-size: 1.063em;
       font-weight: bold;
     }
+
     .loginButton {
       width: 21em;
       height: 3em;
@@ -48,6 +52,7 @@
         opacity: 1;
       }
     }
+
     #passwordForget {
       display: block;
       margin-top: 50%;

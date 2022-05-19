@@ -1,17 +1,27 @@
 import React from 'react';
-import './Feeds.scss';
 import Comment from './Comment';
+import './Feeds.scss';
 import { useState, useEffect } from 'react';
 
 function Feeds({ profileSrc, prdfileId, feedScript }) {
-  let [input, setInput] = useState('');
-  let [comment, setComment] = useState([]);
+  const [input, setInput] = useState('');
+  const [comment, setComment] = useState([]);
 
   const pushComment = () => {
     const copy = [...comment];
     copy.push(input);
     setComment(copy);
     setInput('');
+  };
+
+  const keyPress = e => {
+    if (e.key === 'Enter') {
+      if (e.target.value.length === 0) {
+        alert('댓글을 입력하세요.');
+      } else {
+        pushComment();
+      }
+    }
   };
 
   useEffect(() => {
@@ -109,15 +119,7 @@ function Feeds({ profileSrc, prdfileId, feedScript }) {
               onChange={e => {
                 setInput(e.target.value);
               }}
-              onKeyPress={e => {
-                if (e.key === 'Enter') {
-                  if (e.target.value.length === 0) {
-                    alert('댓글을 입력하세요.');
-                  } else {
-                    pushComment();
-                  }
-                }
-              }}
+              onKeyPress={keyPress}
               value={input}
               type="text"
               className="feedsCommentInput"

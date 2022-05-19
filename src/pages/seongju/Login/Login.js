@@ -4,16 +4,28 @@ import { Link } from 'react-router-dom';
 import './Login.scss';
 
 function Login() {
-  const [Id, setId] = useState('');
-  const [Pw, setPw] = useState('');
   const navigate = useNavigate();
+
+  const [userInput, setUserInput] = useState({ id: '', password: '' });
+
+  const { id, password } = userInput;
+  const isInputValid = id.includes('@') && password.length >= 5;
+
+  const handleInput = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setUserInput({
+      ...userInput,
+      [name]: value,
+    });
+  };
 
   const goToMain = () => {
     fetch('http://10.58.4.207:8000/users/login', {
       method: 'POST',
       body: JSON.stringify({
-        email: Id,
-        password: Pw,
+        email: id,
+        password: password,
       }),
     })
       .then(response => response.json())
@@ -25,34 +37,28 @@ function Login() {
       });
   };
 
-  const handleIdInput = event => {
-    setId(event.target.value);
-  };
-
-  const handlePwInput = event => {
-    setPw(event.target.value);
-  };
-
   return (
     <main className="loginMain">
       <div className="loginWrapper">
         <p className="loginTitle">Westagram</p>
         <input
+          name="id"
           type="text"
           className="id"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          onChange={handleIdInput}
+          onChange={handleInput}
         />
         <input
+          name="password"
           type="password"
           className="password"
           placeholder="비밀번호"
-          onChange={handlePwInput}
+          onChange={handleInput}
         />
         <button
           type="submit"
           className="loginButton"
-          disabled={Id.includes('@') && Pw.length >= 5 ? false : true}
+          disabled={!isInputValid}
           onClick={goToMain}
         >
           로그인
