@@ -1,0 +1,379 @@
+body {
+  background: #fafafa;
+}
+.globalNav {
+  height: 60px;
+  width: 100%;
+  background: white;
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+
+  .fa-brands.fa-instagram {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10%;
+    font-size: 22px;
+  }
+  .line {
+    border: 1px solid black;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .searchBar {
+    margin: auto;
+    height: 30px;
+    width: 250px;
+  }
+  .navLogo {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Lobster', cursive;
+  }
+  .navImg {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 23px;
+    height: 24px;
+  }
+  .like {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .profile {
+    margin-right: 10%;
+  }
+}
+.pageContainer {
+  display: flex;
+}
+.mainPage {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: 50px;
+
+  .instaId {
+    outline: 1px solid #dbdbdb;
+    display: flex;
+    height: 5%;
+    .idDetail {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .profileImg {
+      margin-left: 2%;
+      width: 24px;
+      height: 24px;
+      border-radius: 20px;
+    }
+    .instaNickname {
+      margin-left: 8px;
+      font-size: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+    .fa-solid.fa-ellipsis {
+      margin-left: auto;
+      margin-right: 5%;
+    }
+  }
+
+  .contentsImg {
+    overflow: hidden;
+    width: 100%;
+    height: 70%;
+  }
+  .contentsBottom {
+    display: flex;
+    width: 100%;
+    height: 5%;
+
+    .bottomIcons {
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 18px;
+    }
+    .icon1 {
+      margin-left: 2%;
+      color: red;
+    }
+    .icon2 {
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+    .icon4 {
+      margin-left: auto;
+      margin-right: 2%;
+    }
+  }
+
+  .uploadedMsgContainer {
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+    .uploadedMsgInfo {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  .profileImg2 {
+    margin-left: 2%;
+    margin-right: 0.5%;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+  }
+  .uploadedMsg {
+    font-size: 12px;
+  }
+  .uploadedReply {
+    margin-left: 1%;
+    font-size: 12px;
+  }
+  .replySection {
+    margin-top: 1%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+
+    .replyBox {
+      width: 100%;
+      height: 50%;
+      overflow: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 1%;
+    }
+    .replyContainer {
+      width: 100%;
+      height: 50%;
+      position: relative;
+
+      .mainReply {
+        border: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        font-size: 12px;
+        border-top: 1px solid #dbdbdb;
+        padding-left: 10px;
+      }
+      .replyBtn {
+        height: 100%;
+        position: absolute;
+        color: #0095f6;
+        right: 0;
+        font-size: 12px;
+        border-style: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  /* 댓글달면 추가되는 class */
+  .commentList {
+    display: flex;
+    width: 100%;
+    margin-left: 5px;
+  }
+  .commentText.id {
+    font-size: 12px;
+  }
+  .commentText.value {
+    margin-left: 1%;
+    font-size: 12px;
+  }
+  .replyDel {
+    margin-left: auto;
+    margin-right: 3%;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+/* main-right 부분의 css */
+.mainRight {
+  width: 300px;
+  height: 400px;
+  margin-right: auto;
+  margin-top: 5vh;
+
+  .profileRightContainer {
+    display: flex;
+    height: 15%;
+  }
+  .profileRightInfo {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .profileRightImg {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    /* border : 3px solid rgb(247, 7, 121); */
+  }
+  .profileRightText {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .profileRightBottom {
+    color: rgb(162, 162, 162);
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .storyRightContainer {
+    border: 1px solid #dbdbdb;
+    height: 40%;
+
+    .storyTextBox {
+      display: flex;
+      height: 20%;
+
+      .storyRightText {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .text1 {
+        margin-left: 4%;
+        color: rgb(162, 162, 162);
+      }
+      .text2 {
+        margin-left: auto;
+        margin-right: 4%;
+      }
+    }
+  }
+  .storyListContainer {
+    height: 80%;
+
+    .storyListSection {
+      height: 30%;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-left: 0;
+
+      .storyList {
+        display: flex;
+        margin-left: 2%;
+        height: 100%;
+
+        .storyImg {
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+        }
+        .storyId {
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: 2%;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        .time {
+          font-size: 10px;
+          color: rgb(162, 162, 162);
+        }
+      }
+    }
+  }
+
+  /* 회원 추천 영역 */
+
+  .recommendRightContainer {
+    margin-top: 2%;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+    height: 40%;
+
+    .recommendTextBox {
+      display: flex;
+      height: 20%;
+
+      .recommendRightText {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .text1 {
+        margin-left: 4%;
+        color: rgb(162, 162, 162);
+      }
+      .text2 {
+        margin-left: auto;
+        margin-right: 4%;
+      }
+    }
+    .recommendListContainer {
+      height: 80%;
+
+      .recommendListSection {
+        height: 30%;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-left: 0;
+
+        .recommendList {
+          display: flex;
+          margin-left: 2%;
+          height: 100%;
+
+          .recommendImg {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+          }
+          .recommendId {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+          }
+          .recommendFriends {
+            font-size: 10px;
+            color: rgb(162, 162, 162);
+          }
+          .follow {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0095f6;
+            font-weight: bold;
+            margin-left: auto;
+            border-style: none;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  /* copyright 遺�遺� */
+
+  .copyrightRightContainer {
+    margin-top: 3%;
+
+    .copyrightText {
+      color: rgb(162, 162, 162);
+      text-align: left;
+    }
+    .text2 {
+      margin-top: 5%;
+    }
+  }
+}

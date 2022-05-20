@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "src": "/images/chulhye/main-img/heart.png",
+    "className": "bottomIcons icon1"
+  },
+  {
+    "id": 2,
+    "src": "/images/chulhye/main-img/comment.png",
+    "className": "bottomIcons icon2"
+  },
+  {
+    "id": 3,
+    "src": "/images/chulhye/main-img/share.png",
+    "className": "bottomIcons icon3"
+  },
+  {
+    "id": 4,
+    "src": "/images/chulhye/main-img/shave.png",
+    "className": "bottomIcons icon4"
+  }
+]
