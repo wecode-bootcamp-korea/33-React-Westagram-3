@@ -1,35 +1,14 @@
 import React from 'react';
 import './Main.scss';
-import Nav from '/Users/sozzln/Desktop/33-React-Westagram-3/src/components/Nav/nav.js';
+import '../../../styles/reset.scss';
+import Nav from '../../../components/Nav/nav';
 import CommentList from '../Main/CommentList';
-import '/Users/sozzln/Desktop/33-React-Westagram-3/src/styles/reset.scss';
+import BottomIcons from './BottomIcons';
 
 function Main() {
   return (
     <div className="container">
-      {/* <nav className="globalNav">
-        <i className="fa-brands fa-instagram" />
-        <div className="line" />
-        <p className="navLogo">Westsagram</p>
-        <input type="text" className="searchBar" placeholder="검색" />
-        <img
-          className="navImg arrow"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-          alt="nav"
-        />
-        <img
-          className="navImg like"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-          alt="like"
-        />
-        <img
-          className="navImg profile"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-          alt="profile"
-        />
-      </nav> */}
       <Nav />
-
       <div className="pageContainer">
         <div className="mainPage">
           <div className="instaId">
@@ -46,28 +25,7 @@ function Main() {
             src="/images/chulhye/main-img/colin-meg-r-AGe5t-u-Y-unsplash.jpg"
             alt="contentsImg"
           />
-          <div className="contentsBottom">
-            <img
-              className="bottomIcons icon1"
-              src="/images/chulhye/main-img/heart.png"
-              alt="contentsImg"
-            />
-            <img
-              className="bottomIcons icon2"
-              src="/images/chulhye/main-img/comment.png"
-              alt="contentsImg"
-            />
-            <img
-              className="bottomIcons icon3"
-              src="/images/chulhye/main-img/share.png"
-              alt="contentsImg"
-            />
-            <img
-              className="bottomIcons icon4"
-              src="/images/chulhye/main-img/shave.png"
-              alt="contentsImg"
-            />
-          </div>
+          <BottomIcons />
           <div className="uploadedMsgContainer">
             <img
               className="uploadedMsgInfo profileImg2"
@@ -81,19 +39,6 @@ function Main() {
           <p className="uploadedReply">
             <b>alrbnb</b> 여기는 정말로다가 가고 싶게 생겼구나!
           </p>
-          {/* <div className="replySection">
-            <ul className="replyBox" />
-            <div className="replyContainer">
-              <input
-                type="text"
-                className="mainReply"
-                placeholder="댓글 남기기..."
-              />
-              <button type="submit" className="replyBtn">
-                게시
-              </button>
-            </div>
-          </div> */}
           <CommentList />
         </div>
         <div className="mainRight">

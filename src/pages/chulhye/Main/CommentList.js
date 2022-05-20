@@ -25,7 +25,7 @@ const CommentList = () => {
       contents: comment,
     };
     if (text.length !== 0) {
-      setCommentList(commentList.concat(commentValue));
+      setCommentList([...commentList, commentValue]);
       commentId.current += 1;
     }
   };

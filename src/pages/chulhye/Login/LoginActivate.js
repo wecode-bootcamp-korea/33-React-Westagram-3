@@ -9,8 +9,8 @@ const LoginActivate = () => {
     fetch('http://10.58.3.156:8000/user/login', {
       method: 'POST',
       body: JSON.stringify({
-        user_email: idInput,
-        password: pwdInput,
+        user_email: email,
+        password: password,
       }),
     })
       .then(response => response.json())
@@ -22,37 +22,42 @@ const LoginActivate = () => {
 
     navigate('/main-chulhye');
   };
-  const [idInput, setIdInput] = useState('');
-  const [pwdInput, setPwdInput] = useState('');
+  const [inputValue, setInputValue] = useState({
+    email: '',
+    password: '',
+  });
+  const { email, password } = inputValue;
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInputValue({
+      ...inputValue,
+      [name]: value,
+    });
+  };
+
   const [loginActive, setActive] = useState(false);
 
-  const handleIdInput = e => {
-    setIdInput(e.target.value);
-  };
-  const handlePwdInput = e => {
-    setPwdInput(e.target.value);
-  };
-
   const loginActivate = () => {
-    return idInput.includes('@') && pwdInput.length >= 5
+    return email.includes('@') && password.length >= 5
       ? setActive(true)
       : setActive(false);
   };
-
   return (
     <>
       <input
         type="text"
         className="inputId"
         placeholder="전화번호, 사용자 이름 또는 이메일"
-        onChange={handleIdInput}
+        name="email"
+        onChange={handleInput}
         onKeyUp={loginActivate}
       />
       <input
         type="password"
         className="inputPassword"
         placeholder="비밀번호"
-        onChange={handlePwdInput}
+        name="password"
+        onChange={handleInput}
         onKeyUp={loginActivate}
       />
       <button
